@@ -1,0 +1,13 @@
+/* Improve text rendering */
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+  }
+  
+  /* Optimize slider items */
+  .slider-item {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }

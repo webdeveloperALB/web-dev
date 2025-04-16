@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ProjectSlider } from "./sliderProject";
 import { projectOptions } from "@/data/projectOptions";
 import { useProjectSlider } from "@/hooks/use-slide";
+import "./Thumnail.css"
 
 export function Project() {
   const containerRef = useRef(null);
