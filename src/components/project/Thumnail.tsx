@@ -1,57 +1,64 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import { ProjectSlider } from "./sliderProject";
 import { projectOptions } from "@/data/projectOptions";
 import { useProjectSlider } from "@/hooks/use-slide";
-import "./Thumnail.css"
+import "./Thumnail.css";
 
 export function Project() {
   const containerRef = useRef(null);
   const { transformX1, transformX2, transformY } = useProjectSlider(containerRef);
 
   // Memoize project slides to prevent unnecessary re-renders
-  const firstSlider = projectOptions.first.map(({ type, source }) => (
-    <ProjectSlider key={`${type}-${source}`} type={type} source={source} />
-  ));
+  const firstSlider = useMemo(() => 
+    projectOptions.first.map(({ type, source }) => (
+      <ProjectSlider key={`${type}-${source}`} type={type} source={source} />
+    )),
+    []
+  );
 
-  const secondSlider = projectOptions.second.map(({ type, source }) => (
-    <ProjectSlider key={`${type}-${source}`} type={type} source={source} />
-  ));
+  const secondSlider = useMemo(() => 
+    projectOptions.second.map(({ type, source }) => (
+      <ProjectSlider key={`${type}-${source}`} type={type} source={source} />
+    )),
+    []
+  );
 
   return (
-    <section ref={containerRef} className="relative z-10 mt-14">
+    <section ref={containerRef} className="relative z-10 mt-14 overflow-hidden">
       <div className="grid items-center">
         <div className="bg-background">
-          {/* Added will-change-transform and optimized transforms */}
           <motion.div
-            className="mb-10 flex gap-10 will-change-transform"
+            className="mb-10 flex gap-10"
             style={{
               width: "120vw",
               x: transformX1,
+              translateZ: 0, // Force GPU acceleration
             }}
           >
             {firstSlider}
           </motion.div>
 
           <motion.div
-            className="mb-10 flex gap-10 will-change-transform"
+            className="mb-10 flex gap-10"
             style={{
               width: "120vw",
               x: transformX2,
+              translateZ: 0, // Force GPU acceleration
             }}
           >
             {secondSlider}
           </motion.div>
         </div>
 
-        {/* Replaced height animation with scaleY for better performance */}
         <motion.div
-          className="w-screen bg-background origin-top"
+          className="w-screen bg-background"
           style={{
-            scaleY: transformY,
+            height: transformY,
             borderRadius: "0 0 50% 50%",
+            translateZ: 0, // Force GPU acceleration
           }}
         />
       </div>
