@@ -1,7 +1,6 @@
 'use client';
 import { useState, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "../ui/button";
 import { GiFastArrow } from "react-icons/gi";
 
@@ -11,50 +10,43 @@ import Project3 from "@/assets/images/logofinal.png";
 import Project4 from "@/assets/images/logofinal.png";
 import Project5 from "@/assets/images/logofinal.png";
 import Project6 from "@/assets/images/logofinal.png";
-import Project7 from "@/assets/images/logofinal.png";
 
 const projects = [
   {
     title: "Modern Web Design",
     category: "Web Development",
     image: Project1,
-    slug: "modern-web-design"
+    externalUrl: "https://example.com/web-design"
   },
   {
     title: "Mobile App UI",
     category: "App Design",
     image: Project2,
-    slug: "mobile-app-ui"
+    externalUrl: "https://example.com/app-ui"
   },
   {
     title: "Brand Identity",
     category: "Graphic Design",
     image: Project3,
-    slug: "brand-identity"
+    externalUrl: "https://example.com/brand-identity"
   },
   {
-    title: "Brand Identity",
-    category: "Graphic Design",
+    title: "E-commerce Platform",
+    category: "Web Development",
     image: Project4,
-    slug: "brand-identity"
+    externalUrl: "https://example.com/ecommerce"
   },
   {
-    title: "Brand Identity",
-    category: "Graphic Design",
+    title: "Dashboard System",
+    category: "Web Development",
     image: Project5,
-    slug: "brand-identity"
+    externalUrl: "https://example.com/dashboard"
   },
   {
-    title: "Brand Identity",
-    category: "Graphic Design",
+    title: "Mobile Marketing",
+    category: "App Design",
     image: Project6,
-    slug: "brand-identity"
-  },
-  {
-    title: "Brand Identity",
-    category: "Graphic Design",
-    image: Project7,
-    slug: "brand-identity"
+    externalUrl: "https://example.com/mobile-marketing"
   },
 ];
 
@@ -67,7 +59,6 @@ const PortfolioShowcase = () => {
     const newState = !showAll;
     setShowAll(newState);
 
-    // Scroll to section top when collapsing
     if (!newState && sectionRef.current) {
       sectionRef.current.scrollIntoView({
         behavior: "smooth",
@@ -75,6 +66,7 @@ const PortfolioShowcase = () => {
       });
     }
   };
+
   return (
     <section
       ref={sectionRef}
@@ -99,15 +91,6 @@ const PortfolioShowcase = () => {
                 Explore our latest projects that showcase innovation and excellence in digital solutions
               </p>
             </div>
-
-            {/*<Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full
-                         hover:bg-primary-dark transition-colors text-sm font-medium"
-            >
-              View All Work
-              <GiFastArrow className="w-4 h-4" />
-            </Link>*/}
           </div>
         </div>
 
@@ -121,7 +104,12 @@ const PortfolioShowcase = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all
                           duration-300 animate-fade-in"
               >
-                <Link href={`/portfolio/${project.slug}`} className="block">
+                <a
+                  href={project.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   {/* Image Container */}
                   <div className="relative aspect-video overflow-hidden">
                     <Image
@@ -153,10 +141,11 @@ const PortfolioShowcase = () => {
                       View Project
                     </Button>
                   </div>
-                </Link>
+                </a>
               </article>
             ))}
         </div>
+
         {/* Show More Button */}
         {projects.length > initialProjects && (
           <div className="mt-12 text-center">
