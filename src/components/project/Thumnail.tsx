@@ -8,7 +8,7 @@ import { useProjectSlider } from "@/hooks/use-slide";
 import "./Thumnail.css";
 
 export function Project() {
-  const containerRef = useRef(null);
+{/*const containerRef = useRef(null);
   const { transformX1, transformX2, transformY } = useProjectSlider(containerRef);
 
   // Memoize project slides to prevent unnecessary re-renders
@@ -63,5 +63,5 @@ export function Project() {
         />
       </div>
     </section>
-  );
+  ); */}
 }
