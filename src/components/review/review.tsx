@@ -1,73 +1,201 @@
-import { ArrowRight, MoveRight } from "lucide-react";
+'use client';
+import { useState, useRef } from "react";
 import Image from "next/image";
-import React from "react";
 import { Button } from "../ui/button";
 import { GiFastArrow } from "react-icons/gi";
-import Link from "next/link";
 
-const Review = ({ posts }: any) => {
-  const items = posts.filter((_: any, i: number) => i < 3);
+import Project1 from "@/assets/images/logofinal.png";
+import Project2 from "@/assets/images/logofinal.png";
+import Project3 from "@/assets/images/logofinal.png";
+import Project4 from "@/assets/images/logofinal.png";
+import Project5 from "@/assets/images/logofinal.png";
+import Project6 from "@/assets/images/logofinal.png";
+import Project7 from "@/assets/images/logofinal.png";
+
+const projects = [
+  {
+    title: "Modern Web Design",
+    category: "Web Development",
+    image: Project1,
+    externalUrl: "https://example.com/web-design"
+  },
+  {
+    title: "Mobile App UI",
+    category: "App Design",
+    image: Project2,
+    externalUrl: "https://example.com/app-ui"
+  },
+  {
+    title: "Brand Identity",
+    category: "Graphic Design",
+    image: Project3,
+    externalUrl: "https://example.com/brand-identity"
+  },
+  {
+    title: "E-commerce Platform",
+    category: "Web Development",
+    image: Project4,
+    externalUrl: "https://example.com/ecommerce"
+  },
+  {
+    title: "Dashboard System",
+    category: "Web Development",
+    image: Project5,
+    externalUrl: "https://example.com/dashboard"
+  },
+  {
+    title: "Mobile Marketing",
+    category: "App Design",
+    image: Project6,
+    externalUrl: "https://example.com/mobile-marketing"
+  },
+  {
+    title: "Packaging Design",
+    category: "Graphic Design",
+    image: Project7,
+    externalUrl: "https://example.com/packaging"
+  },
+];
+
+const PortfolioShowcase = () => {
+  const [showAll, setShowAll] = useState(false);
+  const initialProjects = 3;
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const handleShowMore = () => {
+    const newState = !showAll;
+    setShowAll(newState);
+
+    if (!newState && sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
 
   return (
-    <div className="bg-white py-20 flex flex-col justify-center text-black space-y-8">
-      <div className="max-w-7xl mx-auto w-full p-4">
-        <div className="flex gap-4 items-center">
-          <div className="w-10 h-0.5 bg-primary" />
-          <h4>Our Projects</h4>
-        </div>
-        <br />
-        <div className="flex justify-between items-center w-full">
-          <div>
-            <h4 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-              Our Recent
-            </h4>
-            <h4 className="text-primary text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-              Work Portfolio
-            </h4>
+    <section
+      ref={sectionRef}
+      className="bg-white py-12 md:py-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-12 md:mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-1 bg-primary rounded-full" />
+            <span className="text-lg font-semibold text-gray-600">
+              Featured Work
+            </span>
           </div>
-          <div>
-            <Link href={"/portfolio"}>
-              <button className="buttonwhite  bg-primary flex">
-                View Projects
-              </button>
-            </Link>
+
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div className="space-y-2">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                Creative Portfolio
+              </h2>
+              <p className="text-lg text-gray-600 max-w-xl">
+                Explore our latest projects that showcase innovation and excellence in digital solutions
+              </p>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          {items.map((item: any, i: any) => {
-            return (
-              <Link key={i} href={`/portfolio/${item?.slug.current}`}>
-                <div className="flex flex-col transition-all hover:scale-95 cursor-pointer gap-4 group project">
-                  <div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects
+            .slice(0, showAll ? projects.length : initialProjects)
+            .map((project, index) => (
+              <article
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all
+                          duration-300 animate-fade-in"
+              >
+                <a
+                  href={project.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  {/* Image Container */}
+                  <div className="relative aspect-video overflow-hidden">
                     <Image
-                      src={item?.mainImage}
-                      alt="project"
-                      width={500}
-                      height={400}
-                      className="rounded-3xl"
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
+                    <div className="absolute inset-0 bg-black/20 transition-opacity group-hover:opacity-0" />
                   </div>
-                  <div className="">
-                    <span className="border-x rounded-3xl border-x-black bg-primary text-white py-2 px-4 text-base">
-                      {item?.category}
-                    </span>
+
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="text-white">
+                      <span className="text-sm font-medium text-primary">
+                        {project.category}
+                      </span>
+                      <h3 className="text-xl font-bold mt-1">{project.title}</h3>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <h4 className="text-left text-lg md:text-xl lg:text-2xl font-medium">
-                      {item?.title}
-                    </h4>
-                    <Button className="h-14 w-14 bg-transparent group-hover:bg-primary transition-all rounded-full">
-                      <GiFastArrow className="h-6 w-6 group-hover:-rotate-45" />
+
+                  {/* Hover Button */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Button
+                      size="lg"
+                      className="rounded-full bg-white text-primary hover:bg-gray-100 shadow-lg"
+                    >
+                      View Project
                     </Button>
                   </div>
-                </div>
-              </Link>
-            );
-          })}
+                </a>
+              </article>
+            ))}
         </div>
+
+        {/* Show More Button */}
+        {projects.length > initialProjects && (
+          <div className="mt-12 text-center">
+            <Button
+              onClick={handleShowMore}
+              className="group rounded-full bg-primary text-white hover:bg-primary-dark px-8 py-6 text-lg
+                        transition-all duration-300 hover:scale-105"
+            >
+              {showAll ? "Show Less" : "Show More"}
+              <GiFastArrow
+                className={`ml-2 w-5 h-5 transition-transform ${showAll ? "rotate-180" : ""
+                  } group-hover:animate-bounce`}
+              />
+            </Button>
+          </div>
+        )}
       </div>
-    </div>
+
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+        .animate-bounce {
+          animation: bounce 1s infinite;
+        }
+      `}</style>
+    </section>
   );
 };
 
-export default Review;
+export default PortfolioShowcase;

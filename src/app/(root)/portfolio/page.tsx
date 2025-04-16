@@ -15,6 +15,8 @@ import { groq } from "next-sanity";
 import { client } from "../../../../sanity/lib/client";
 import { Project } from "@/components/project/Thumnail";
 
+
+
 const query = groq`
   *[_type=="project"] {
     ...,
