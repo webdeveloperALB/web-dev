@@ -65,7 +65,6 @@ const Page = async () => {
         </Breadcrumb>
       </div>
       <TextSLider1 />
-      <Project />
       <ProjectContainer items={posts} />
     </div>
   );
