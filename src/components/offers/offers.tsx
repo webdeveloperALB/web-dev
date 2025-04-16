@@ -73,16 +73,15 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Discovery & Research
+                  Project Discovery
                 </h3>
                 <p className="section-innovation__description-text">
-                  We start by immersing ourselves in your brand, goals, and
-                  target audience. Our team conducts thorough research to
-                  identify key challenges and opportunities, ensuring a solid
-                  foundation for your project.
+                  We dive deep into understanding your brand, goals, and users. This helps us
+                  create tailored digital strategies with maximum impact and clarity.
                 </p>
               </motion.div>
             </li>
+
             <li className="section-innovation__grid-item">
               <div className="section-innovation__grid-icon">
                 <Iconstragegy />
@@ -92,16 +91,15 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Strategy & Planning
+                  Technical Planning
                 </h3>
                 <p className="section-innovation__description-text">
-                  Our experts develop a tailored strategy aligned with your
-                  objectives, defining project scope, timelines, and milestones.
-                  We prioritize collaboration, ensuring everyone is on the same
-                  page.
+                  We architect scalable full-stack solutions by selecting the right tech stack,
+                  defining database structures, and setting smart project milestones.
                 </p>
               </motion.div>
             </li>
+
             <li className="section-innovation__grid-item">
               <div className="section-innovation__grid-icon">
                 <Icondraw />
@@ -111,16 +109,15 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Design & Prototyping
+                  UI/UX & Prototyping
                 </h3>
                 <p className="section-innovation__description-text">
-                  Our creative team crafts visually stunning, user-centered
-                  designs that bring your vision to life. We iterate and refine
-                  prototypes, ensuring an intuitive and seamless user
-                  experience.
+                  We design intuitive interfaces that convert. From low-fidelity wireframes
+                  to interactive prototypes, our goal is to deliver beauty with usability.
                 </p>
               </motion.div>
             </li>
+
             <li className="section-innovation__grid-item">
               <div className="section-innovation__grid-icon">
                 <Icon_dev />
@@ -130,15 +127,15 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Development & Engineering
+                  Full-Stack Development
                 </h3>
                 <p className="section-innovation__description-text">
-                  Our skilled developers and engineers build robust, scalable
-                  solutions using cutting-edge technologies. We prioritize
-                  quality, performance, and security.
+                  From powerful front-end experiences to secure, high-performing back-end
+                  systems, we bring your project to life with modern development practices.
                 </p>
               </motion.div>
             </li>
+
             <li className="section-innovation__grid-item">
               <div className="section-innovation__grid-icon">
                 <Icontest />
@@ -148,15 +145,15 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Testing & Quality Assurance
+                  QA & Optimization
                 </h3>
                 <p className="section-innovation__description-text">
-                  We rigorously test and refine your project, ensuring it meets
-                  our high standards. Our QA team identifies and addresses any
-                  issues, guaranteeing a polished final product.
+                  Every line of code is tested. We focus on performance, usability, and
+                  security to ensure a bug-free, optimized product across all devices.
                 </p>
               </motion.div>
             </li>
+
             <li className="section-innovation__grid-item">
               <div className="section-innovation__grid-icon">
                 <Icon_rocket />
@@ -166,16 +163,16 @@ export default function SectionOffer() {
                 variants={item}
               >
                 <h3 className="section-innovation__description-heading text-xl md:text-3xl">
-                  Launch & Deployment
+                  Deployment & Support
                 </h3>
                 <p className="section-innovation__description-text">
-                  We take care of the launch process, ensuring a smooth
-                  transition to production. Our team provides ongoing support
-                  and maintenance, ensuring your project continues to thrive.
+                  We deploy your site to secure cloud hosting platforms and offer
+                  continuous maintenance, updates, and monitoring to help your product grow.
                 </p>
               </motion.div>
             </li>
           </motion.ul>
+
         </div>
       </section>
     </div>

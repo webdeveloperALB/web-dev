@@ -60,7 +60,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div className="md:col-span-9">
+        <div className="md:col-span-9 max-[500px]:hidden"> {/* Added hiding class */}
           <Image
             src="/logofinal.svg"
             alt="HERO-IMAGE"
@@ -69,7 +69,7 @@ const Hero = () => {
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
           />
         </div>
-        <div className="bg-primary/50 p-4 capitalize flex flex-col gap-8 justify-between rounded-xl md:col-span-3 ">
+        <div className="bg-primary/50 p-4 capitalize flex flex-col gap-8 justify-between rounded-xl md:col-span-3">
           <Image
             src="/qrcode.png"
             alt="herobarcode"
