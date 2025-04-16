@@ -37,7 +37,7 @@ const Page = () => {
       </div>
       <Abouthome />
       <TextSLider1 />
-      <Project />
+
       <TextSLider1 />
 
       <SectionOffer />

@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { GiFastArrow } from "react-icons/gi";
 
@@ -17,43 +18,43 @@ const projects = [
     title: "Modern Web Design",
     category: "Web Development",
     image: Project1,
-    externalUrl: "https://example.com/web-design"
+    slug: "modern-web-design"
   },
   {
     title: "Mobile App UI",
     category: "App Design",
     image: Project2,
-    externalUrl: "https://example.com/app-ui"
+    slug: "mobile-app-ui"
   },
   {
     title: "Brand Identity",
     category: "Graphic Design",
     image: Project3,
-    externalUrl: "https://example.com/brand-identity"
+    slug: "brand-identity"
   },
   {
-    title: "E-commerce Platform",
-    category: "Web Development",
+    title: "Brand Identity",
+    category: "Graphic Design",
     image: Project4,
-    externalUrl: "https://example.com/ecommerce"
+    slug: "brand-identity"
   },
   {
-    title: "Dashboard System",
-    category: "Web Development",
+    title: "Brand Identity",
+    category: "Graphic Design",
     image: Project5,
-    externalUrl: "https://example.com/dashboard"
+    slug: "brand-identity"
   },
   {
-    title: "Mobile Marketing",
-    category: "App Design",
+    title: "Brand Identity",
+    category: "Graphic Design",
     image: Project6,
-    externalUrl: "https://example.com/mobile-marketing"
+    slug: "brand-identity"
   },
   {
-    title: "Packaging Design",
+    title: "Brand Identity",
     category: "Graphic Design",
     image: Project7,
-    externalUrl: "https://example.com/packaging"
+    slug: "brand-identity"
   },
 ];
 
@@ -66,6 +67,7 @@ const PortfolioShowcase = () => {
     const newState = !showAll;
     setShowAll(newState);
 
+    // Scroll to section top when collapsing
     if (!newState && sectionRef.current) {
       sectionRef.current.scrollIntoView({
         behavior: "smooth",
@@ -73,7 +75,6 @@ const PortfolioShowcase = () => {
       });
     }
   };
-
   return (
     <section
       ref={sectionRef}
@@ -98,6 +99,15 @@ const PortfolioShowcase = () => {
                 Explore our latest projects that showcase innovation and excellence in digital solutions
               </p>
             </div>
+
+            {/*<Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-full
+                         hover:bg-primary-dark transition-colors text-sm font-medium"
+            >
+              View All Work
+              <GiFastArrow className="w-4 h-4" />
+            </Link>*/}
           </div>
         </div>
 
@@ -111,12 +121,7 @@ const PortfolioShowcase = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all
                           duration-300 animate-fade-in"
               >
-                <a
-                  href={project.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+                <Link href={`/portfolio/${project.slug}`} className="block">
                   {/* Image Container */}
                   <div className="relative aspect-video overflow-hidden">
                     <Image
@@ -148,11 +153,10 @@ const PortfolioShowcase = () => {
                       View Project
                     </Button>
                   </div>
-                </a>
+                </Link>
               </article>
             ))}
         </div>
-
         {/* Show More Button */}
         {projects.length > initialProjects && (
           <div className="mt-12 text-center">
