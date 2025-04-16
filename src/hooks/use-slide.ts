@@ -7,17 +7,17 @@ export function useProjectSlider(element: any) {
   const { scrollYProgress } = useScroll({
     target: element,
     offset: ['start end', 'end start'],
-    smooth: 1.5, // Increased smoothness for better mobile performance
+    // smooth: 1.5 (remove this as it's not a valid property)
   });
 
-  // Use spring physics for smoother animations
+  // Use spring physics with mobile-friendly parameters
   const smoothProgress = useSpring(scrollYProgress, {
-    damping: 30,
-    stiffness: 200,
+    damping: typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 30,
+    stiffness: typeof window !== 'undefined' && window.innerWidth < 768 ? 150 : 200,
     mass: 0.5,
   });
 
-  // Optimize transforms with rounded values and limited precision
+  // Optimized transforms with mobile consideration
   const transformX1 = useTransform(smoothProgress, [0, 1], [0, -250], {
     clamp: true,
   });
@@ -26,10 +26,13 @@ export function useProjectSlider(element: any) {
     clamp: true,
   });
 
-  // Use percentage-based values for better responsive performance
-  const transformY = useTransform(smoothProgress, [0, 0.9], ['100%', '0%'], {
-    clamp: false,
-  });
+  // Smoother percentage-based transform for mobile
+  const transformY = useTransform(
+    smoothProgress,
+    [0, 0.9],
+    ['100vh', '0vh'], // Use viewport units for better mobile behavior
+    { clamp: true }
+  );
 
   return { transformX1, transformX2, transformY };
 }
