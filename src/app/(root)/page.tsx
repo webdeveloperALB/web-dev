@@ -43,8 +43,7 @@ export default async function Home() {
       <SectionOffer />
       <TextSLider1 />
       <SectionQuote />
-      <Project />
-      <Review posts={posts} />
+      <Review />
       <TextSLider1 />
       <SectionFaq />
       <Contact />
