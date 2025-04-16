@@ -30,30 +30,31 @@ function SectionFaqItem({ heading, text }: ItemProps) {
 
 const LIST: ItemProps[] = [
   {
-    heading: "What services does your agency offer?",
-    text: "Our agency provides a range of digital services, including website design and development, mobile app creation, digital marketing, and more.",
+    heading: "What services do you offer as a full-stack agency?",
+    text: "We provide end-to-end solutions including front-end and back-end development, UI/UX design, database architecture, API development, deployment, and ongoing support.",
   },
   {
-    heading: "What sets your agency apart from others?",
-    text: "Our team of experts is dedicated to delivering exceptional results, and we prioritize collaboration, innovation, and customer satisfaction.",
+    heading: "What technologies do you specialize in?",
+    text: "Our stack includes React, Next.js, Node.js, Express, MySQL, MongoDB, Firebase, Tailwind CSS, and more — allowing us to deliver scalable, high-performance applications.",
   },
   {
-    heading: "What types of websites do you develop?",
-    text: "We develop custom, responsive websites for various industries, including e-commerce, corporate, and non-profit organizations.",
+    heading: "Can you build custom websites and platforms?",
+    text: "Yes. We specialize in custom web applications tailored to your unique business goals — whether it’s an e-commerce store, booking system, SaaS, or portfolio website.",
   },
   {
-    heading: "How long does website development take?",
-    text: "Project timelines vary depending on scope and complexity, but we typically deliver websites within 6-12 weeks",
+    heading: "Do you offer maintenance and post-launch support?",
+    text: "Absolutely. We provide reliable maintenance packages, bug fixes, updates, and performance optimization to keep your project running smoothly.",
   },
   {
-    heading: "How quickly do you respond to support requests?    ",
-    text: "Our team responds to support requests within 24 hours, ensuring minimal downtime and efficient issue resolution.",
+    heading: "How long does a typical full-stack project take?",
+    text: "Depending on the complexity, most projects are completed within 4 to 10 weeks. We always set clear timelines and communicate every step.",
   },
   {
-    heading: " What digital marketing services do you offer?    ",
-    text: "Our services include SEO, PPC advertising, social media management, email marketing, and content creation.   ",
+    heading: "Can you improve or upgrade my existing website?",
+    text: "Yes. We can audit, redesign, and refactor your current site for better speed, responsiveness, SEO, and user experience.",
   },
 ];
+
 
 export default function SectionFaqList() {
   return (
