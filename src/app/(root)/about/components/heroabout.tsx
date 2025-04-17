@@ -5,20 +5,21 @@ import { TbRosetteDiscountCheckFilled } from "react-icons/tb";
 
 const Abouthome = () => {
   const phrase =
-    "We are a full-service digital agency dedicated to transforming your ideas into impactful digital experiences. Our passion for technology and commitment to excellence drives us to deliver solutions that not only meet but exceed your expectations. To empower businesses with cutting-edge digital solutions that drive growth, engagement, and success in an ever-evolving digital landscape.";
+    "We specialize in building fast, scalable, and modern web applications. From responsive front-end interfaces to secure and efficient back-end systems, we offer end-to-end full-stack development tailored to your business needs. Whether you're launching a startup or upgrading your existing digital presence, we're here to turn your vision into a powerful web experience.";
+
   return (
     <section className="bg-white text-black">
-      <div className=" max-w-7xl mx-auto p-4 flex justify-center items-center flex-col min-h-screen">
+      <div className="max-w-7xl mx-auto p-4 flex justify-center items-center flex-col min-h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="w-full">
             <Image
               src={
-                "https://images.pexels.com/photos/3810792/pexels-photo-3810792.jpeg?auto=compress&cs=tinysrgb&w=600"
+                "/aboutus2.jpg"
               }
-              alt="about"
+              alt="web development agency"
               width={500}
               height={300}
-              className="w-full max-w-4xl h-80 md:h-[500px]  object-cover rounded-3xl"
+              className="w-full max-w-4xl h-80 md:h-[500px] object-cover rounded-3xl"
             />
           </div>
           <div className="space-y-6">
@@ -27,44 +28,45 @@ const Abouthome = () => {
               <h4>About Us</h4>
             </div>
             <h4 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-              We&apos;re{" "}
+              Your{" "}
               <span className="text-primary text-3xl md:text-4xl lg:text-5xl">
-                award winning
+                full-stack partner
               </span>
               <br />
-              Digital Agency
+              for digital success
             </h4>
 
             <div>
               <ParallaxReveal paragraph={phrase} />
             </div>
+
             <div className="space-y-2">
               <div className="flex gap-4 items-center capitalize">
                 <TbRosetteDiscountCheckFilled
                   size={30}
                   className="text-primary"
                 />
-                <p>Award winning Agency</p>
+                <p>Custom Web Applications</p>
               </div>
               <div className="flex gap-4 items-center capitalize">
                 <TbRosetteDiscountCheckFilled
                   size={30}
                   className="text-primary"
                 />
-                <p>Experienced Team Members</p>
+                <p>Modern UI/UX & Front-End</p>
               </div>
               <div className="flex gap-4 items-center capitalize">
                 <TbRosetteDiscountCheckFilled
                   size={30}
                   className="text-primary"
                 />
-                <p>High Quality Services</p>
+                <p>Reliable Back-End & APIs</p>
               </div>
             </div>
 
             <div className="flex items-center gap-8">
               <div className="delafield text-black text-3xl">
-                <h5>Desco4PF</h5>
+                <h5>WebDevelopment</h5>
               </div>
             </div>
           </div>
