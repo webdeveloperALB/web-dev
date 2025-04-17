@@ -31,12 +31,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       },
       {
-        url: `https://www.logicleads.tech/projects`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.8,
-      },
-      {
         url: `https://www.logicleads.tech/services`,
         lastModified: new Date(),
         changeFrequency: 'weekly',

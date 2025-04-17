@@ -83,11 +83,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link className={cn()} href={"/portfolio"}>
-                  Portofolio
-                </Link>
-              </li>
-              <li>
                 <Link className={cn()} href={"/contact"}>
                   Contact
                 </Link>

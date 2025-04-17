@@ -32,7 +32,6 @@ const ITEMS_OLD = [
 const ITEMS = [
   { name: "Home", href: "/", soon: false },
   { name: "About us", href: "/about", soon: false },
-  { name: "Projects", href: "/portfolio", soon: false },
   { name: "Services", href: "/services", soon: false },
   { name: "Contact Us", href: "/contact", soon: false },
   // { name: "FAQ", href: "#faq", soon: false },
@@ -81,7 +80,7 @@ export default function MenuNav() {
       <div className="mt-8 flex gap-4 items-center">
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="mailto:bylogicleads@gmail.com"
+            href="mailto:kevikoltraka157@gmail.com"
             aria-label="Send email to Logicleads"
           >
             <Mail color="white" className="text-white w-4 h-4" />
@@ -89,7 +88,7 @@ export default function MenuNav() {
         </span>
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="https://www.facebook.com/profile.php?id=100068749546786&mibextid=LQQJ4d"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Facebook page"
@@ -99,7 +98,7 @@ export default function MenuNav() {
         </span>
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="https://www.instagram.com/logicleads?igsh=NzhnOGlleWhwNjQ3&utm_source=qr"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Instagram profile"
@@ -109,7 +108,7 @@ export default function MenuNav() {
         </span>
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="https://www.linkedin.com/company/logicleads/"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our LinkedIn profile"

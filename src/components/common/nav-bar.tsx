@@ -29,25 +29,25 @@ function useMenuAnimation(isOpen: boolean) {
   useEffect(() => {
     const menuAnimations = isOpen
       ? [
-          [
-            "nav",
-            { transform: "translateX(0%)" },
-            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 },
-          ],
-          [
-            "li",
-            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
-            { delay: stagger(0.05), at: "-0.1" },
-          ],
-        ]
+        [
+          "nav",
+          { transform: "translateX(0%)" },
+          { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.6 },
+        ],
+        [
+          "li",
+          { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+          { delay: stagger(0.05), at: "-0.1" },
+        ],
+      ]
       : [
-          [
-            "li",
-            { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
-            { delay: stagger(0.05, { from: "last" }), at: "<" },
-          ],
-          ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
-        ];
+        [
+          "li",
+          { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
+          { delay: stagger(0.05, { from: "last" }), at: "<" },
+        ],
+        ["nav", { transform: "translateX(-100%)" }, { at: "-0.1" }],
+      ];
 
     animate([
       [
@@ -116,20 +116,6 @@ function NavMenu() {
               onClick={() => setIsOpen(!isOpen)}
             >
               Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={cn(
-                "text-lg ",
-                pathname === "/portfolio"
-                  ? "font-bold text-primary underline"
-                  : ""
-              )}
-              href={"/portfolio"}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              Portofolio
             </Link>
           </li>
           <li>
@@ -207,7 +193,7 @@ const Navbar = () => {
       <header className="max-w-7xl w-full mx-auto p-2 flex justify-between items-center py-4">
         <div>
           <Link href={"/"} className="text-xl ">
-            LogicLeads<span className="text-primary text-5xl">.</span>
+            WebDevelopment<span className="text-primary text-5xl">.</span>
           </Link>
         </div>
         <div>
@@ -238,19 +224,7 @@ const Navbar = () => {
                 Services
               </Link>
             </li>
-            <li>
-              <Link
-                className={cn(
-                  " ",
-                  pathname === "/portfolio"
-                    ? "font-bold text-primary underline"
-                    : "text-white"
-                )}
-                href={"/portfolio"}
-              >
-                Portofolio
-              </Link>
-            </li>
+
             <li>
               <Link
                 className={cn(

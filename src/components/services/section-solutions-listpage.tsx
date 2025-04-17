@@ -14,75 +14,75 @@ type ItemProps = {
 
 const items = [
   {
-    title: "Mobile app development",
+    title: "Full Stack Development",
     content:
-      "at a digital agency involves creating custom applications tailored to clients' needs for both Android and iOS platforms. Our team of skilled developers uses the latest technologies and best practices to deliver high-quality, user-friendly mobile apps.",
+      "Our full-stack development services offer comprehensive solutions for building dynamic websites and applications. We integrate the latest technologies to deliver scalable, secure, and user-friendly platforms that drive business success.",
     skills: [
-      "Android Development",
-      "iOs Development",
-      "Flutter App Development",
-      "React Native App Development",
+      "ReactJS Development",
+      "Node.js Development",
+      "Express.js Development",
+      "MongoDB & MySQL",
+      "API Development",
     ],
   },
   {
-    title: "Web Development",
+    title: "E-Commerce Development",
     content:
-      "Our digital agency focuses on creating dynamic, responsive, and engaging websites and web applications. Our developers are proficient in a variety of modern web technologies to ensure your online presence is impactful. ",
+      "We specialize in creating powerful e-commerce platforms tailored to your business needs. Our solutions are designed for seamless transactions, secure payment integrations, and a user-friendly shopping experience.",
     skills: [
-      "ReactJs Development",
-      "Laravel Development",
-      "VueJs Development",
-      "NextJs Development",
+      "Shopify Development",
+      "WooCommerce Integration",
+      "Custom E-commerce Solutions",
+      "Payment Gateway Integration",
+      "Product Management",
     ],
   },
   {
-    title: "UI / UX Design",
+    title: "Web Design & User Experience",
     content:
-      "UI/UX design at our digital agency is all about creating intuitive and visually appealing designs that enhance user satisfaction. Our designers employ a user-centered approach to ensure the final product is both functional and aesthetically pleasing",
+      "Our web design services focus on creating visually appealing and functional websites. We prioritize user experience (UX) to ensure smooth navigation and design that enhances user satisfaction.",
     skills: [
-      "User Research",
-      "User Personas",
-      "Usability Testing",
-      "Wireframing",
+      "Responsive Web Design",
+      "UX/UI Design",
       "Prototyping",
-      "Visual Design",
+      "Wireframing",
+      "Interactive Design",
     ],
   },
   {
-    title: "Graphic Design",
+    title: "SEO & Digital Marketing",
     content:
-      "Graphic design at our digital agency encompasses creating visually stunning and effective designs for various media. Our designers excel in transforming ideas into impactful visual content that resonates with your target audience",
-    skills: [
-      "Packaging Design",
-      "Infographic Design",
-      "Illustration",
-      "Brand Identity Design",
-      "Print Design",
-      "Digital Design",
-    ],
-  },
-  {
-    title: "Digital Marketing",
-    content:
-      "Digital marketing at our digital agency focuses on using data-driven strategies to increase your online presence and drive business growth. Our team employs a mix of creativity and analytical thinking to develop and execute effective marketing campaigns.",
+      "Our SEO and digital marketing strategies ensure that your website ranks high in search engines, driving organic traffic. We also create tailored marketing campaigns to boost online visibility and business growth.",
     skills: [
       "Search Engine Optimization",
-      "Search Engine Marketing",
-      "Social Media Marketing",
+      "PPC Advertising",
+      "Content Marketing",
+      "Social Media Campaigns",
       "Email Marketing",
-      "Affiliate Marketing",
     ],
   },
   {
-    title: "Copywriting",
+    title: "API Integration & Development",
     content:
-      "Copywriting at our digital agency involves creating compelling and persuasive text that effectively communicates your brand’s message and drives engagement. Our skilled copywriters craft content that resonates with your audience and meets your business objectives",
+      "We provide seamless API integration and development, enabling your website or application to interact with third-party services, enhancing functionality and providing smoother user experiences.",
     skills: [
-      "SEO Copywriting",
-      "Content Writing",
-      "Sales Copy",
-      "Technical Writing",
-      "Creative Writing",
+      "RESTful API Development",
+      "GraphQL API Integration",
+      "Payment APIs",
+      "Social Media Integration",
+      "Third-Party Service Integration",
+    ],
+  },
+  {
+    title: "Maintenance & Support",
+    content:
+      "Our team offers continuous website maintenance and support to ensure optimal performance. We handle everything from bug fixes to updates, so you can focus on growing your business.",
+    skills: [
+      "Bug Fixes & Troubleshooting",
+      "Website Performance Optimization",
+      "Security Updates & Patches",
+      "Database Maintenance",
+      "Backup & Recovery Solutions",
     ],
   },
 ];
@@ -103,7 +103,7 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
       <div>
         <h3 className="section-solutions__item-heading">{heading}</h3>
         <br />
-        <div className="hidden md:flex gap-4 flex-wrap  mt-4 mx-auto w-full">
+        <div className="hidden md:flex gap-4 flex-wrap mt-4 mx-auto w-full">
           {item.skills.map((skill: any, idx: number) => (
             <div
               className="bg-white accord border border-black text-black rounded-3xl text-xs md:text-sm px-4 py-2"
@@ -118,7 +118,7 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
         <Icon_accordion type={isOpened ? "close" : "open"} />
       </span>
       <div className="section-solutions__item-spoiler">
-        <div className="md:hidden flex gap-4 flex-wrap  mt-4 mx-auto w-full">
+        <div className="md:hidden flex gap-4 flex-wrap mt-4 mx-auto w-full">
           {item.skills.map((skill: any, idx: number) => (
             <div
               className="bg-white accord border border-black text-black rounded-3xl text-xs md:text-sm px-4 py-2"
@@ -148,13 +148,13 @@ export default function SectionSolutionsList() {
           <div>
             <h4 className="text-3xl font-medium md:text-4xl lg:text-5xl">
               Discover Our <br />
-              Digital Solutions
+              Web Development Solutions
             </h4>
           </div>
           <div className="border-l-2 px-4 border-l-primary h-fit">
             <ParallaxReveal
               paragraph={
-                "At Logicleads, we offer a comprehensive suite of services designed to elevate your online presence and drive your business growth. Our team of experts combines creativity, technology, and strategic thinking to deliver outstanding results tailored to your unique needs. Explore our range of services below:"
+                "At our agency, we specialize in full-stack web development, offering end-to-end services to build high-performing, secure, and scalable websites. From custom web apps to SEO-optimized content, our solutions are designed to elevate your business online."
               }
             />
           </div>

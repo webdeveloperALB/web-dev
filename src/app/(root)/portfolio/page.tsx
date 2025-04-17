@@ -53,14 +53,7 @@ const Page = async () => {
             <BreadcrumbSeparator>
               <Slash />
             </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/portfolio"
-                className="text-primary text-xl"
-              >
-                Projects
-              </BreadcrumbLink>
-            </BreadcrumbItem>
+            
           </BreadcrumbList>
         </Breadcrumb>
       </div>

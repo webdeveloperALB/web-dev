@@ -92,11 +92,7 @@ const Page = async ({ params }: Props) => {
             <BreadcrumbSeparator>
               <Slash />
             </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/projects" className=" text-xl">
-                Projects
-              </BreadcrumbLink>
-            </BreadcrumbItem>
+
 
             <BreadcrumbSeparator>
               <Slash />
