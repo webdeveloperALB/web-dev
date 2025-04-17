@@ -5,7 +5,7 @@ const Social = () => {
   return (
     <div className="card">
       <a
-        href="https://www.instagram.com/logicleads?igsh=NzhnOGlleWhwNjQ3&utm_source=qr"
+        href="https://www.instagram.com/webdevelopment.al?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         className="socialContainer containerOne"
       >
         <svg className="socialSvg instagramSvg" viewBox="0 0 16 16">
@@ -19,7 +19,7 @@ const Social = () => {
       </a>
 
       <a
-        href="https://www.linkedin.com/company/logicleads/"
+        href=""
         target="_blank"
         className="socialContainer containerThree"
       >
@@ -29,7 +29,7 @@ const Social = () => {
       </a>
 
       <a
-        href="https://wa.link/1cc755"
+        href=""
         className="socialContainer containerFour"
       >
         <svg className="socialSvg whatsappSvg" viewBox="0 0 16 16">

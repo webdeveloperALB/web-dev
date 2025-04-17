@@ -4,50 +4,43 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { GiFastArrow } from "react-icons/gi";
 
-import Project1 from "@/assets/images/logofinal.png";
-import Project2 from "@/assets/images/logofinal.png";
-import Project3 from "@/assets/images/logofinal.png";
-import Project4 from "@/assets/images/logofinal.png";
-import Project5 from "@/assets/images/logofinal.png";
-import Project6 from "@/assets/images/logofinal.png";
+import Project1 from "@/assets/images/AR logo.svg";
+import Project2 from "@/assets/images/gohealth.svg";
+import Project3 from "@/assets/images/acecut.jpg";
+import Project4 from "@/assets/images/9Dots.svg";
+import Project5 from "@/assets/images/portfolio.svg";
 
 const projects = [
   {
-    title: "Modern Web Design",
-    category: "Web Development",
+    title: "Auto Rental Platform",
+    category: "Full-Stack Web Application",
     image: Project1,
-    externalUrl: "https://example.com/web-design"
+    externalUrl: "https://auto-rental-alpha.vercel.app/"
   },
   {
-    title: "Mobile App UI",
-    category: "App Design",
+    title: "Go Health Albania Landing Page",
+    category: "Web Design & Lead Generation",
     image: Project2,
-    externalUrl: "https://example.com/app-ui"
+    externalUrl: "https://lp.gohealthalbania.com/"
   },
   {
-    title: "Brand Identity",
-    category: "Graphic Design",
+    title: "Ace Cut Barbershop Website",
+    category: "Web Design & Booking System",
     image: Project3,
-    externalUrl: "https://example.com/brand-identity"
+    externalUrl: "https://ace-cut.vercel.app/"
   },
   {
-    title: "E-commerce Platform",
-    category: "Web Development",
+    title: "9Dots Agency Website",
+    category: "Full-Stack Web Development",
     image: Project4,
-    externalUrl: "https://example.com/ecommerce"
+    externalUrl: "https://www.9dotsagency.com/"
   },
   {
     title: "Dashboard System",
-    category: "Web Development",
+    category: "Web Design & Development",
     image: Project5,
-    externalUrl: "https://example.com/dashboard"
-  },
-  {
-    title: "Mobile Marketing",
-    category: "App Design",
-    image: Project6,
-    externalUrl: "https://example.com/mobile-marketing"
-  },
+    externalUrl: "https://portfolio-one-mu-80.vercel.app/"
+  }
 ];
 
 const PortfolioShowcase = () => {
@@ -116,11 +109,12 @@ const PortfolioShowcase = () => {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-black/20 transition-opacity group-hover:opacity-0" />
                   </div>
+
 
                   {/* Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">

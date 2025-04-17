@@ -30,31 +30,26 @@ function SectionFaqItem({ heading, text }: ItemProps) {
 
 const LIST: ItemProps[] = [
   {
-    heading: "What services do you offer as a full-stack agency?",
-    text: "We provide end-to-end solutions including front-end and back-end development, UI/UX design, database architecture, API development, deployment, and ongoing support.",
+    heading: "Can you transform my outdated website into a high-performing web app?",
+    text: "Absolutely. We specialize in revamping legacy websites into fast, modern web applications using the latest full-stack technologies for better UX, SEO, and speed.",
   },
   {
-    heading: "What technologies do you specialize in?",
-    text: "Our stack includes React, Next.js, Node.js, Express, MySQL, MongoDB, Firebase, Tailwind CSS, and more — allowing us to deliver scalable, high-performance applications.",
+    heading: "Do you create tailored dashboards or internal tools for businesses?",
+    text: "Yes. We build custom admin panels, analytics dashboards, and automation tools to streamline your business operations and decision-making.",
   },
   {
-    heading: "Can you build custom websites and platforms?",
-    text: "Yes. We specialize in custom web applications tailored to your unique business goals — whether it’s an e-commerce store, booking system, SaaS, or portfolio website.",
+    heading: "Can you optimize my site for conversions and user behavior?",
+    text: "Definitely. We combine smart UI/UX, performance tuning, and behavioral analytics to increase conversions and keep your users engaged.",
   },
   {
-    heading: "Do you offer maintenance and post-launch support?",
-    text: "Absolutely. We provide reliable maintenance packages, bug fixes, updates, and performance optimization to keep your project running smoothly.",
+    heading: "Can you build systems that connect with multiple services (APIs, CRMs, automation)?",
+    text: "Yes. We design systems that integrate seamlessly with third-party APIs, CRMs, payment platforms, and even custom automations for your workflow.",
   },
   {
-    heading: "How long does a typical full-stack project take?",
-    text: "Depending on the complexity, most projects are completed within 4 to 10 weeks. We always set clear timelines and communicate every step.",
-  },
-  {
-    heading: "Can you improve or upgrade my existing website?",
-    text: "Yes. We can audit, redesign, and refactor your current site for better speed, responsiveness, SEO, and user experience.",
+    heading: "How do you ensure the long-term scalability of the projects you build?",
+    text: "We use modular architecture, clean code, and scalable databases — so your app can grow without needing to rebuild everything from scratch.",
   },
 ];
-
 
 export default function SectionFaqList() {
   return (

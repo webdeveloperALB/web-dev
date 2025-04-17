@@ -18,8 +18,11 @@ const Hero = () => {
         </h1>
         <h1
           className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary"
-          data-aos="zoom-in-left"
-          data-aos-duration={1800}
+          suppressHydrationWarning // Add this to suppress the specific warning
+          {...(typeof window !== 'undefined' ? {
+            'data-aos': "zoom-in-left",
+            'data-aos-duration': 1800
+          } : {})}
         >
           Code & Creativity
         </h1>

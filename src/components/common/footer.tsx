@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa6";
-import { TbHexagonLetterLFilled } from "react-icons/tb";
+import { TbHexagonLetterWFilled } from "react-icons/tb";
 
 const Footer = () => {
   return (
@@ -34,35 +34,34 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
           <div className="lg:col-span-5 flex flex-col gap-4">
             <div className="flex gap-2 text-lg items-center">
-              <TbHexagonLetterLFilled className="h-8 w-8 text-primary" /> Leads
+              <TbHexagonLetterWFilled className="h-8 w-8 text-primary" /> WebDevelopment
             </div>
             <p>
-              At Logicleads, we are more than just a service provider; we are
-              your partner in digital success. Let&apos;s work together to
-              create something extraordinary.
+              At WebDevelopment, we don’t just build websites — we engineer complete digital solutions tailored to your goals. From design to deployment, we’re your full-stack partner for creating fast, modern, and scalable web experiences.
             </p>
+
             <div className="mt-4 flex gap-4 items-center">
               <span className="p-4 border border-white cursor-pointer rounded-md  hover:bg-primary hover:border-none text-white transition-all">
-                <a href="mailto:bylogicleads@gmail.com">
+                <a href="mailto:kevikoltraka157@gmail.com">
                   <Mail color="white" className="text-white w-4 h-4" />
                 </a>
               </span>
               <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none  text-white bg- transition-all">
                 <a
-                  href="https://www.facebook.com/profile.php?id=100068749546786&mibextid=LQQJ4d"
+                  href="/"
                   target="_blank"
                 >
                   <FaFacebook color="white" className="text-white" />
                 </a>
               </span>
               <span className="p-4 border border-white cursor-pointer rounded-md  hover:bg-primary hover:border-none text-white bg- transition-all">
-                <a href="https://www.instagram.com/logicleads?igsh=NzhnOGlleWhwNjQ3&utm_source=qr">
+                <a href="https://www.instagram.com/webdevelopment.al?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                   <FaInstagram color="white" className="text-white" />
                 </a>
               </span>
 
               <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none  text-white transition-all">
-                <a href="https://www.linkedin.com/company/logicleads/">
+                <a href="/">
                   <FaLinkedin color="white" className="text-white" />
                 </a>
               </span>
@@ -101,28 +100,21 @@ const Footer = () => {
             </h4>
             <ul className="flex flex-col gap-4 ">
               <li>
-                <a href="tel:+2347035172208">07035172208</a>
+                <a href="tel:+2347035172208">+355688172927</a>
               </li>
               <li>
-                <a href="mailto:bylogicleads@gmail.com">
-                  bylogicleads@gmail.com
-                </a>
-              </li>
-              <li>
-                <Link className={cn()} href={"/about"}>
-                  www.comapny.com
-                </Link>
+                <a href="tel:+2347035172208">+355685692096</a>
               </li>
             </ul>
-          </div>{" "}
+          </div>
           <div className="md:col-span-3"></div>
         </div>
         <div className="my-8 bg-white h-[1px] opacity-50 w-full" />
         <div className="flex justify-between w-full flex-col md:flex-row gap-4 items-center  cursor-wait ">
           <div>
             <p className="inline-flex gap-1">
-              Copyright &copy; 2024{" "}
-              <span className="text-primary">Logic Leads.</span>
+              Copyright &copy; 2025{" "}
+              <span className="text-primary">Web Development.</span>
               All Rights Reserved.
             </p>
           </div>

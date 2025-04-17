@@ -18,7 +18,7 @@ export default function SectionFaq() {
         <div className="section-faq__image-wrapper">
           <Image
             src={
-              "https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&w=600"
+              "/faq.jpeg"
             }
             alt="faq"
             fill={true}
