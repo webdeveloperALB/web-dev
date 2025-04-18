@@ -32,7 +32,7 @@ span {
 
 p {
   font-family: "Alpino", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
 }
 
 .menubar {
@@ -54,7 +54,7 @@ p {
   display: block;
   transform-origin: -20px 50%;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0;
   text-transform: uppercase;
   will-change: transform, opacity, filter;
@@ -168,7 +168,7 @@ p {
 .cta span {
   position: relative;
   font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #fff;
