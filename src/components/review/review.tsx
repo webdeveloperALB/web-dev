@@ -8,7 +8,6 @@ import Project1 from "@/assets/images/autorental.jpg";
 import Project4 from "@/assets/images/9Dots.svg";
 import Project3 from "@/assets/images/acecut.jpg";
 import Project2 from "@/assets/images/gohealth.jpg";
-import Project5 from "@/assets/images/portfolio.svg";
 
 const projects = [
   {
@@ -35,12 +34,6 @@ const projects = [
     category: "Web Design & Lead Generation",
     image: Project2,
     externalUrl: "https://lp.gohealthalbania.com/"
-  },
-  {
-    title: "Dashboard System",
-    category: "Web Design & Development",
-    image: Project5,
-    externalUrl: "https://portfolio-one-mu-80.vercel.app/"
   }
 ];
 

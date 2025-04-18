@@ -3,7 +3,7 @@ import "./header.scss";
 import React, { useContext, useState } from "react";
 import { NavigationContext } from "../navigation";
 import Icon_menu from "@/components/icons/icon-menu";
-
+import Image from 'next/image';
 import { useAnimate, stagger } from "framer-motion";
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
@@ -37,9 +37,20 @@ const Header = () => {
       className="header sticky"
     >
       <nav className="header__nav">
-        <span className="header__logo ">
-          <Link href={"/"}>WebDevelopment.Al </Link>
+        <span className="header__logo">
+          <Link href="/">
+            <Image
+              src="/android-chrome-192x192.png"
+              alt="Logo"
+              width={120}
+              height={40}
+              style={{ borderRadius: '10px', filter: 'none' }}
+            />
+          </Link>
         </span>
+
+
+
         <ul className="header__nav-list">
           <li className="header__nav-item">
             <button
