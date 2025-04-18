@@ -179,8 +179,8 @@ p {
   top: 0;
   margin-left: 10px;
   fill: none;
-  strokelinecap: round;
-  strokeLinejoin: round;
+  -webkit-strokelinecap: round;
+  -webkit-strokeLinejoin: round;
   stroke: #9541c6;
   stroke-width: 2;
   transform: translateX(-5px);
