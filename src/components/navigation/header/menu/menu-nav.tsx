@@ -81,7 +81,7 @@ export default function MenuNav() {
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
             href="mailto:kevikoltraka157@gmail.com"
-            aria-label="Send email to Logicleads"
+            aria-label="Send email to Web Development team"
           >
             <Mail color="white" className="text-white w-4 h-4" />
           </a>
@@ -98,7 +98,7 @@ export default function MenuNav() {
         </span>
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="/"
+            href="https://www.instagram.com/webdevelopment.al?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit our Instagram profile"
