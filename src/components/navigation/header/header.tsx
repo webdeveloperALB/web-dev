@@ -40,7 +40,7 @@ const Header = () => {
         <span className="header__logo">
           <Link href="/">
             <Image
-              src="/android-chrome-192x192.png"
+              src="/logofinal.svg"
               alt="Logo"
               width={120}
               height={40}
