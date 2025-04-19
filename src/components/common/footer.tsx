@@ -42,7 +42,7 @@ const Footer = () => {
 
             <div className="mt-4 flex gap-4 items-center">
               <span className="p-4 border border-white cursor-pointer rounded-md  hover:bg-primary hover:border-none text-white transition-all">
-                <a href="mailto:kevikoltraka157@gmail.com">
+                <a href="mailto:support@webdev-al.com">
                   <Mail color="white" className="text-white w-4 h-4" />
                 </a>
               </span>
