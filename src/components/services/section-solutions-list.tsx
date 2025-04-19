@@ -100,11 +100,12 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
         <div className="hidden md:flex gap-4 flex-wrap mt-4 mx-auto w-full">
           {item.skills.map((skill: any, idx: number) => (
             <div
-              className="bg-white accord border border-black text-black rounded-3xl text-base md:text-m px-4 py-2"
+              className="bg-white accord border border-black text-black rounded-3xl text-lg md:text-md px-4 py-2"
               key={idx}
             >
               {skill}
             </div>
+
           ))}
         </div>{" "}
       </div>
