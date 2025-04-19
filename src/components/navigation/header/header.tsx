@@ -42,7 +42,7 @@ const Header = () => {
             <Image
               src="/logofinal.svg"
               alt="Logo"
-              width={120}
+              width={100}
               height={40}
               style={{ borderRadius: '10px', filter: 'none' }}
             />
