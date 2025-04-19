@@ -97,10 +97,10 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
       <div>
         <h3 className="section-solutions__item-heading">{heading}</h3>
         <br />
-        <div className="hidden md:flex gap-4 flex-wrap  mt-4 mx-auto w-full">
+        <div className="hidden md:flex gap-4 flex-wrap mt-4 mx-auto w-full">
           {item.skills.map((skill: any, idx: number) => (
             <div
-              className="bg-white accord border border-black text-black rounded-3xl text-xs md:text-sm px-4 py-2"
+              className="bg-white accord border border-black text-black rounded-3xl text-base md:text-m px-4 py-2"
               key={idx}
             >
               {skill}
@@ -112,10 +112,10 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
         <Icon_accordion type={isOpened ? "close" : "open"} />
       </span>
       <div className="section-solutions__item-spoiler">
-        <div className="md:hidden flex gap-4 flex-wrap  mt-4 mx-auto w-full">
+        <div className="md:hidden flex gap-4 flex-wrap mt-4 mx-auto w-full">
           {item.skills.map((skill: any, idx: number) => (
             <div
-              className="bg-white accord border border-black text-black rounded-3xl text-xs md:text-sm px-4 py-2"
+              className="bg-white accord border border-black text-black rounded-3xl text-base md:text-lg px-4 py-2 font-medium"
               key={idx}
             >
               {skill}
@@ -123,7 +123,7 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
           ))}
         </div>{" "}
         <br />
-        <p className="section-solutions__item-text">{text}</p>
+        <p className="section-solutions__item-text text-2xl md:text-xl font-normal">{text}</p>
       </div>
     </li>
   );

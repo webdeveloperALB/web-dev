@@ -67,9 +67,7 @@ const Abouthome = () => {
               <button className="button bg-primary">Learn More</button>
             </Link>
 
-            <div className="delafield text-white text-3xl">
-              <h5>KORGIX</h5>
-            </div>
+
           </div>
         </div>
       </div>

@@ -80,7 +80,7 @@ export default function MenuNav() {
       <div className="mt-8 flex gap-4 items-center">
         <span className="p-4 border border-white cursor-pointer rounded-md text-white transition-all">
           <a
-            href="mailto:kevikoltraka157@gmail.com"
+            href="mailto:support@webdev-al.com"
             aria-label="Send email to Web Development team"
           >
             <Mail color="white" className="text-white w-4 h-4" />

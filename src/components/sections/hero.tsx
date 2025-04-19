@@ -72,15 +72,16 @@ const Hero = () => {
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
           />
         </div>
-        <div className="bg-primary/50 p-4 capitalize flex flex-col gap-8 justify-between items-center rounded-xl md:col-span-3">
+        <div className="bg-primary/50 capitalize flex flex-col gap-8 justify-between items-center rounded-xl md:col-span-3">
           <Image
             src="/qrcode.png"
             alt="herobarcode"
             width={300}
             height={300}
-            className="filter-none !filter-none animate-pulse mx-auto"
+            className="filter-none !filter-none animate-pulse w-full p-0"
           />
         </div>
+
       </div>
     </div>
   );

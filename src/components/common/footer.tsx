@@ -37,7 +37,7 @@ const Footer = () => {
               <TbHexagonLetterWFilled className="h-8 w-8 text-primary" /> WebDevelopment
             </div>
             <p>
-              At WebDevelopment, we don’t just build websites — we engineer complete digital solutions tailored to your goals. From design to deployment, we’re your full-stack partner for creating fast, modern, and scalable web experiences.
+            At WebDevelopment, we build fast, modern websites — full-stack solutions tailored to your goals from design to deployment.
             </p>
 
             <div className="mt-4 flex gap-4 items-center">

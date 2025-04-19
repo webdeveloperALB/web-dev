@@ -41,11 +41,12 @@
 
     &__top-caption {
         @extend %caps;
+        font-size: 1.2rem
     }
 
     &__description-text {
         @extend %body;
-
+       font-size: 1.4rem;
         color: #1e1e1c;
     }
 
@@ -141,6 +142,7 @@
 
     &__description-heading {
         @extend %h4;
+        font-size: 2rem;
     }
 }
 

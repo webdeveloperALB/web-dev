@@ -27,6 +27,7 @@
     }
 
     &__top-caption {
+        font-size: 1.2rem;
         display: block;
         width: 100%;
         text-align: center;
@@ -90,6 +91,10 @@
             padding: 0;
         }
 
+        &__top-caption {
+            font-size: 1rem;
+        }
+
         &__quote-icon {
             display: none;
         }
@@ -100,7 +105,7 @@
         }
 
         &-quote-text {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             line-height: 140%;
         }
 

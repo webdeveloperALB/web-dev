@@ -64,17 +64,18 @@ const PortfolioShowcase = () => {
         <div className="mb-12 md:mb-16">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-1 bg-primary rounded-full" />
-            <span className="text-lg font-semibold text-gray-600">
+            <span className="text-3xl font-semibold text-gray-600">
               Featured Work
             </span>
+
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div className="space-y-2">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black">
                 Creative Portfolio
               </h2>
-              <p className="text-lg text-gray-600 max-w-xl">
+              <p className="text-2xl text-gray-600 max-w-xl">
                 Explore our latest projects that showcase innovation and excellence in digital solutions
               </p>
             </div>
