@@ -100,7 +100,7 @@ export default function RootLayout({
       <head>
         <link rel="canonical" href="https://www.webdev-al.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico?v=2" />
         {/* Preload critical assets */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Structured data for better Google search results */}
