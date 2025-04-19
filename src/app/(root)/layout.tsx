@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     "front-end and back-end integration",
     "online presence",
   ],
-  metadataBase: new URL("https://web-dev-dun-phi.vercel.app/"), // Replace with your business URL
+  metadataBase: new URL("https://www.webdev-al.com/"), // Replace with your business URL
   alternates: {
     canonical: "/",
     languages: {
