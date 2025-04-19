@@ -5,7 +5,7 @@ import { ParallaxReveal } from "@/app/providers/reveal";
 
 const Hero = () => {
   const phrase =
-    "Combining clean code, smart design, and modern technologies, we craft custom digital experiences that perform and scale. From front-end aesthetics to back-end logic, we build solutions that streamline processes and empower your business online.";
+    "We build custom digital solutions that combine elegant design with powerful performance, helping your business thrive online.";
   return (
     <div className="max-w-7xl mx-auto text-white w-full p-4">
       <div className="flex gap-4 my-8 items-center">
@@ -58,7 +58,7 @@ const Hero = () => {
             Firebase & Cloud Functions
           </span>
         </div>
-        <div>
+        <div className="max-[500px]:hidden">
           <ParallaxReveal paragraph={phrase} />
         </div>
       </div>
@@ -72,13 +72,13 @@ const Hero = () => {
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
           />
         </div>
-        <div className="bg-primary/50 p-4 capitalize flex flex-col gap-8 justify-between rounded-xl md:col-span-3">
+        <div className="bg-primary/50 p-4 capitalize flex flex-col gap-8 justify-between items-center rounded-xl md:col-span-3">
           <Image
             src="/qrcode.png"
             alt="herobarcode"
             width={300}
             height={300}
-            className="filter-none !filter-none animate-pulse"
+            className="filter-none !filter-none animate-pulse mx-auto"
           />
         </div>
       </div>
