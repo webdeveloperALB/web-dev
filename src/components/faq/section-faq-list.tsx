@@ -1,8 +1,23 @@
 "use client";
 
-import Icon_accordion from "../icons/icon-accordion";
-import "./section-faq.scss";
 import { useState } from "react";
+import "./section-faq.scss";
+
+type IconAccordionProps = {
+  isOpen: boolean;
+};
+
+// Modified Icon component that renders a plus or x inside a square
+function IconAccordion({ isOpen }: IconAccordionProps) {
+  return (
+    <div className="section-faq__icon-container">
+      <div className={`section-faq__icon ${isOpen ? "open" : ""}`}>
+        <span className="horizontal"></span>
+        <span className="vertical"></span>
+      </div>
+    </div>
+  );
+}
 
 type ItemProps = {
   heading: string;
@@ -19,7 +34,7 @@ function SectionFaqItem({ heading, text }: ItemProps) {
     >
       <h3 className="section-faq__item-heading">{heading}</h3>
       <span className="section-faq__item-button">
-        <Icon_accordion type={isOpened ? "close" : "open"} />
+        <IconAccordion isOpen={isOpened} />
       </span>
       <div className="section-faq__spoiler-wrapper">
         <p className="section-faq__item-text">{text}</p>
