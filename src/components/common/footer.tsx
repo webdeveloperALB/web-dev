@@ -37,7 +37,7 @@ const Footer = () => {
               <TbHexagonLetterWFilled className="h-8 w-8 text-primary" /> WebDevelopment
             </div>
             <p>
-              At WebDevelopment, we don’t just build websites — we engineer complete digital solutions tailored to your goals. From design to deployment, we’re your full-stack partner for creating fast, modern, and scalable web experiences.
+              At WebDevelopment, we build fast, modern websites — full-stack solutions tailored to your goals from design to deployment.
             </p>
 
             <div className="mt-4 flex gap-4 items-center">
@@ -67,33 +67,34 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="md:col-span-2">
-            <h4 className="text-primary font-medium text-lg md:text-xl">
+          <div className="flex flex-col md:col-span-2 gap-3">
+            <h4 className="text-primary font-medium text-2xl md:text-2xl">
               Navigation
             </h4>
-            <ul className="flex flex-col gap-4 ">
+            <ul className="flex flex-col gap-4">
               <li>
-                <Link className={cn()} href={"/about"}>
+                <Link className={cn("text-lg")} href={"/about"}>
                   About
                 </Link>
               </li>
               <li>
-                <Link className={cn()} href={"/services"}>
+                <Link className={cn("text-lg")} href={"/services"}>
                   Services
                 </Link>
               </li>
               <li>
-                <Link className={cn()} href={"/contact"}>
+                <Link className={cn("text-lg")} href={"/contact"}>
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="md:col-span-2">
+
+          <div className="flex flex-col md:col-span-2 gap-3">
             <h4 className="text-primary font-medium text-lg md:text-xl">
               Contact
             </h4>
-            <ul className="flex flex-col gap-4 ">
+            <ul className="flex flex-col gap-4">
               <li>
                 <a href="tel:+2347035172208">+355688172927</a>
               </li>
@@ -105,18 +106,21 @@ const Footer = () => {
           <div className="md:col-span-3"></div>
         </div>
         <div className="my-8 bg-white h-[1px] opacity-50 w-full" />
-        <div className="flex justify-between w-full flex-col md:flex-row gap-4 items-center  cursor-wait ">
+        <div className="flex justify-center w-full flex-col md:flex-row gap-2 text-center items-center px-4 py-3">
           <div>
-            <p className="inline-flex gap-1">
+            <p className="inline-flex flex-wrap justify-center gap-1 text-xl">
               Copyright &copy; 2025{" "}
-              <span className="text-primary">Web Development.</span>
+              <span className="text-primary font-semibold">Web Development.</span>
               All Rights Reserved.
             </p>
           </div>
-          <div>
-            <p>Terms and Conditions | Privacy Policy</p>
-          </div>
+          {/*<div>
+            <p className="text-xl text-white">
+              Terms and Conditions | Privacy Policy
+            </p>
+          </div>*/}
         </div>
+
       </div>
     </footer>
   );

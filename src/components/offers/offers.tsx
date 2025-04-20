@@ -72,7 +72,7 @@ export default function SectionOffer() {
                 className="section-innovation__grid-description"
                 variants={item}
               >
-                <h3 className="section-innovation__description-heading text-xl md:text-3xl">
+                <h3 className="section-innovation__description-heading text-3xl md:text-3xl">
                   Project Discovery
                 </h3>
                 <p className="section-innovation__description-text">
