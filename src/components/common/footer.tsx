@@ -67,33 +67,34 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="md:col-span-2">
-            <h4 className="text-primary font-medium text-lg md:text-xl">
+          <div className="flex flex-col md:col-span-2 gap-3">
+            <h4 className="text-primary font-medium text-2xl md:text-2xl">
               Navigation
             </h4>
-            <ul className="flex flex-col gap-4 ">
+            <ul className="flex flex-col gap-4">
               <li>
-                <Link className={cn()} href={"/about"}>
+                <Link className={cn("text-lg")} href={"/about"}>
                   About
                 </Link>
               </li>
               <li>
-                <Link className={cn()} href={"/services"}>
+                <Link className={cn("text-lg")} href={"/services"}>
                   Services
                 </Link>
               </li>
               <li>
-                <Link className={cn()} href={"/contact"}>
+                <Link className={cn("text-lg")} href={"/contact"}>
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="md:col-span-2">
+
+          <div className="flex flex-col md:col-span-2 gap-3">
             <h4 className="text-primary font-medium text-lg md:text-xl">
               Contact
             </h4>
-            <ul className="flex flex-col gap-4 ">
+            <ul className="flex flex-col gap-4">
               <li>
                 <a href="tel:+2347035172208">+355688172927</a>
               </li>
