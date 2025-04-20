@@ -1,5 +1,9 @@
-User-Agent: *
+# *
+User-agent: *
 Allow: /
-Disallow: /private/
 
+# Host
+Host: https://www.webdev-al.com
+
+# Sitemaps
 Sitemap: https://www.webdev-al.com/sitemap.xml
