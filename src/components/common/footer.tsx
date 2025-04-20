@@ -37,7 +37,7 @@ const Footer = () => {
               <TbHexagonLetterWFilled className="h-8 w-8 text-primary" /> WebDevelopment
             </div>
             <p>
-            At WebDevelopment, we build fast, modern websites — full-stack solutions tailored to your goals from design to deployment.
+              At WebDevelopment, we build fast, modern websites — full-stack solutions tailored to your goals from design to deployment.
             </p>
 
             <div className="mt-4 flex gap-4 items-center">
@@ -105,18 +105,21 @@ const Footer = () => {
           <div className="md:col-span-3"></div>
         </div>
         <div className="my-8 bg-white h-[1px] opacity-50 w-full" />
-        <div className="flex justify-between w-full flex-col md:flex-row gap-4 items-center  cursor-wait ">
+        <div className="flex justify-center w-full flex-col md:flex-row gap-2 text-center items-center px-4 py-3">
           <div>
-            <p className="inline-flex gap-1">
+            <p className="inline-flex flex-wrap justify-center gap-1 text-xl">
               Copyright &copy; 2025{" "}
-              <span className="text-primary">Web Development.</span>
+              <span className="text-primary font-semibold">Web Development.</span>
               All Rights Reserved.
             </p>
           </div>
-          <div>
-            <p>Terms and Conditions | Privacy Policy</p>
-          </div>
+          {/*<div>
+            <p className="text-xl text-white">
+              Terms and Conditions | Privacy Policy
+            </p>
+          </div>*/}
         </div>
+
       </div>
     </footer>
   );

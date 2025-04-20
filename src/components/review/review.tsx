@@ -5,9 +5,7 @@ import { Button } from "../ui/button";
 import { GiFastArrow } from "react-icons/gi";
 
 import Project1 from "@/assets/images/autorental.jpg";
-import Project4 from "@/assets/images/9Dots.svg";
 import Project3 from "@/assets/images/acecut.jpg";
-import Project2 from "@/assets/images/gohealth.jpg";
 
 const projects = [
   {
@@ -17,24 +15,11 @@ const projects = [
     externalUrl: "https://auto-rental-alpha.vercel.app/"
   },
   {
-    title: "9Dots Agency Website",
-    category: "Full-Stack Web Development",
-    image: Project4,
-    externalUrl: "https://www.9dotsagency.com/"
-  },
-
-  {
     title: "Ace Cut Barbershop Website",
     category: "Web Design & Booking System",
     image: Project3,
     externalUrl: "https://ace-cut.vercel.app/"
   },
-  {
-    title: "Go Health Albania Landing Page",
-    category: "Web Design & Lead Generation",
-    image: Project2,
-    externalUrl: "https://lp.gohealthalbania.com/"
-  }
 ];
 
 const PortfolioShowcase = () => {
