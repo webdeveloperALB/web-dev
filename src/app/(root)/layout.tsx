@@ -24,10 +24,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: "%s | Full-Stack Web Development Services",
-    default: "Web Development | Professional Full-Stack Web Development Solutions",
+    default: "WebDev AL | Expert Full-Stack Development Services",
   },
   description:
-    "Expert Full-Stack Web Development services tailored for businesses. Custom React, Node.js, and database solutions to enhance your online presence. Get a free quote today!",
+    "Custom React web development for fast, modern, and scalable websites. Tailored solutions for businesses. Get a free consultation today!",
   keywords: [
     "Web Development",
     "full-stack web development",
@@ -54,8 +54,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/en-US",
-      "es-ES": "/es-ES",
+      "en": "https://www.webdev-al.com/",
+      "en-US": "https://www.webdev-al.com/en-US",
+      "es-ES": "https://www.webdev-al.com/es-ES",
+      "x-default": "https://www.webdev-al.com/"
     },
   },
   category: "technology",
@@ -98,12 +100,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
-        <link rel="canonical" href="https://www.webdev-al.com/" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico?v=2" />
-        {/* Preload critical assets */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="alternate" hrefLang="en" href="https://www.webdev-al.com/" />
+        <link rel="alternate" hrefLang="en-US" href="https://www.webdev-al.com/en-US" />
+        <link rel="alternate" hrefLang="es-ES" href="https://www.webdev-al.com/es-ES" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.webdev-al.com/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Structured data for better Google search results */}
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
