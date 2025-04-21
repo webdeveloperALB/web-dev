@@ -60,16 +60,16 @@ export const metadata: Metadata = {
   },
   category: "technology",
   openGraph: {
-    title: "Kevin's Web Development | Professional Full-Stack Development Services",
+    title: "Web Development | Professional Full-Stack Development Services",
     description: "Custom web solutions for businesses of all sizes. Specializing in React, Node.js, and responsive design.",
     url: "https://www.webdev-al.com/",
-    siteName: "Kevin's Web Development",
+    siteName: "Web Development",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kevin's Web Development | Professional Full-Stack Solutions",
+    title: "Web Development | Professional Full-Stack Solutions",
     description: "Expert web development services tailored for your business needs.",
   },
   robots: {
@@ -110,7 +110,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "Kevin's Web Development",
+              "name": "Web Development",
               "url": "https://www.webdev-al.com/",
               "potentialAction": {
                 "@type": "SearchAction",
@@ -126,7 +126,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Kevin's Web Development",
+              "name": "Web Development",
               "description": "Expert Full-Stack Web Development services tailored for businesses.",
               "url": "https://www.webdev-al.com/",
               "priceRange": "$$",
