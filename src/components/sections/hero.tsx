@@ -16,7 +16,7 @@ const Hero = () => {
         <h1 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
           Where Innovation meets
         </h1>
-        <h1
+        <h2
           className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary"
           suppressHydrationWarning // Add this to suppress the specific warning
           {...(typeof window !== 'undefined' ? {
@@ -25,7 +25,7 @@ const Hero = () => {
           } : {})}
         >
           Code & Creativity
-        </h1>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
