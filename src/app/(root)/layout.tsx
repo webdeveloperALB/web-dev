@@ -102,6 +102,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Next.js</title>
         <link rel="icon" href="/favicon.ico?v=2" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -111,7 +112,6 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://www.webdev-al.com/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-
         {/* Google Tag (gtag.js) */}
         <Script
           async
@@ -175,11 +175,14 @@ export default function RootLayout({
         <BalancerProvider>
           <SmoothScrolling>
             <Navigation />
-            <main className="pt-24" id="main-content">{children}</main>
+            <main className="pt-24" id="main-content">
+              {children}
+            </main>
             <TextSLider1 />
             <Footer />
           </SmoothScrolling>
         </BalancerProvider>
+        <Analytics />
       </body>
     </html>
   );
