@@ -13,9 +13,9 @@ const Hero = () => {
         <h4>Era Defining Website Development</h4>
       </div>
       <div>
-        <h1 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
+        <h2 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
           Where Innovation meets
-        </h1>
+        </h2>
         <h2
           className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary"
           suppressHydrationWarning // Add this to suppress the specific warning
