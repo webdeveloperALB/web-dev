@@ -3,8 +3,8 @@ import AOS from "aos";
 import { useEffect } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script"; // Ensure this is imported
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 import "@/app/styles/globals.scss";
 import "@/app/styles/button.css";
@@ -111,6 +111,24 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://www.webdev-al.com/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
+        {/* Google Tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YNYDCSLK92"
+        />
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YNYDCSLK92');
+            `,
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
