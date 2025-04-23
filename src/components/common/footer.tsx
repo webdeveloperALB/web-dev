@@ -1,16 +1,42 @@
+"use client";
+
 import { cn } from "@/lib/utils";
-import { Mail } from "lucide-react";
+import { Mail, X } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
+  FaGoogle,
 } from "react-icons/fa6";
 import { TbHexagonLetterWFilled } from "react-icons/tb";
 
 const Footer = () => {
+  const [showEmailOptions, setShowEmailOptions] = useState(false);
+  const emailOptionsRef = useRef<HTMLDivElement>(null);
+  const email = "support@webdev-al.com";
+  const subject = "Website Inquiry";
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}`;
+
+  // Close email options when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (emailOptionsRef.current && !emailOptionsRef.current.contains(event.target as Node)) {
+        setShowEmailOptions(false);
+      }
+    };
+    
+    if (showEmailOptions) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showEmailOptions]);
+
   return (
     <footer>
       <div className="max-w-7xl mx-auto p-4 py-16 w-full">
@@ -23,7 +49,7 @@ const Footer = () => {
             there
           </div>
           <div>
-            <Link href={"/about"} className="w-fit">
+            <Link href={"/contact"} className="w-fit">
               <button className="button hover:animate-pulse transition-all bg-primary">
                 Contact
               </button>
@@ -41,12 +67,54 @@ const Footer = () => {
             </p>
 
             <div className="mt-4 flex gap-4 items-center">
-              <span className="p-4 border border-white cursor-pointer rounded-md  hover:bg-primary hover:border-none text-white transition-all">
-                <a href="mailto:support@webdev-al.com">
+              {/* Email with options */}
+              <div className="relative">
+                <span 
+                  className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none text-white transition-all inline-flex items-center"
+                  onClick={() => setShowEmailOptions(!showEmailOptions)}
+                >
                   <Mail color="white" className="text-white w-4 h-4" />
-                </a>
-              </span>
-              <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none  text-white bg- transition-all">
+                </span>
+                
+                {showEmailOptions && (
+                  <div 
+                    ref={emailOptionsRef}
+                    className="absolute mt-2 left-0 bg-white rounded-md shadow-lg p-2 z-10 w-48"
+                  >
+                    <div className="flex justify-between items-center mb-2 pb-1 border-b border-gray-200">
+                      <span className="text-sm font-medium text-gray-700">Email Options</span>
+                      <button 
+                        onClick={() => setShowEmailOptions(false)}
+                        className="text-gray-400 hover:text-gray-600"
+                      >
+                        <X size={16} />
+                      </button>
+                    </div>
+                    
+                    <a 
+                      href={`mailto:${email}?subject=${encodeURIComponent(subject)}`}
+                      className="flex items-center p-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                    >
+                      <Mail size={16} className="mr-2" />
+                      <span>Open in Mail App</span>
+                    </a>
+                    
+                    <a 
+                      href={gmailUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center p-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                    >
+                      <div className="w-4 h-4 mr-2 flex items-center justify-center">
+                        <FaGoogle className="text-red-500" />
+                      </div>
+                      <span>Open in Gmail</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+              
+              <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none text-white bg- transition-all">
                 <a
                   href="/"
                   target="_blank"
@@ -54,13 +122,13 @@ const Footer = () => {
                   <FaFacebook color="white" className="text-white" />
                 </a>
               </span>
-              <span className="p-4 border border-white cursor-pointer rounded-md  hover:bg-primary hover:border-none text-white bg- transition-all">
+              <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none text-white bg- transition-all">
                 <a href="https://www.instagram.com/webdevelopment.al?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                   <FaInstagram color="white" className="text-white" />
                 </a>
               </span>
 
-              <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none  text-white transition-all">
+              <span className="p-4 border border-white cursor-pointer rounded-md hover:bg-primary hover:border-none text-white transition-all">
                 <a href="/">
                   <FaLinkedin color="white" className="text-white" />
                 </a>
@@ -120,7 +188,6 @@ const Footer = () => {
             </p>
           </div>*/}
         </div>
-
       </div>
     </footer>
   );
