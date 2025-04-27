@@ -1,55 +1,115 @@
-import React from "react";
-import {
-  Html,
-  Body,
-  Head,
-  Heading,
-  Hr,
-  Container,
-  Preview,
-  Section,
-  Text,
-} from "@react-email/components";
-import { Tailwind } from "@react-email/tailwind";
+import React from 'react';
+import { Html, Body, Head, Heading, Hr, Container, Preview, Section, Text } from '@react-email/components';
 
-type ContactFormEmailProps = {
-  message: string;
-  senderEmail: string;
+interface ContactFormEmailProps {
   firstName: string;
-  lastName?: string; 
+  lastName: string;
+  senderEmail: string;
   phoneNumber: string;
   subject: string;
-};
+  message: string;
+}
 
 export default function ContactFormEmail({
-  message,
-  senderEmail,
   firstName,
   lastName,
+  senderEmail,
   phoneNumber,
   subject,
+  message,
 }: ContactFormEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>New message from your site</Preview>
-      <Tailwind>
-        <Body className="bg-gray-100 text-black">
-          <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-              <Heading className="leading-tight">
-                You received the following message from the contact form
-              </Heading>
-              <Text>{message}</Text>
-              <Hr />
-              <Text>The sender&apos;s name is: {firstName} {lastName}</Text>
-              <Text>The sender&apos;s email is: {senderEmail}</Text>
-              <Text>The sender&apos;s subject is: {subject}</Text>
-              <Text>The sender&apos;s phone number is: {phoneNumber}</Text>
-            </Section>
-          </Container>
-        </Body>
-      </Tailwind>
+      <Preview>New Contact Form Submission</Preview>
+      <Body style={main}>
+        <Container style={container}>
+          <Heading style={h1}>Contact Form Submission</Heading>
+          <Text style={text}>You received a new contact form submission:</Text>
+          
+          <Section style={section}>
+            <Text style={sectionHeading}>Name:</Text>
+            <Text style={sectionContent}>{firstName} {lastName}</Text>
+          </Section>
+          
+          <Section style={section}>
+            <Text style={sectionHeading}>Email:</Text>
+            <Text style={sectionContent}>{senderEmail}</Text>
+          </Section>
+          
+          <Section style={section}>
+            <Text style={sectionHeading}>Phone:</Text>
+            <Text style={sectionContent}>{phoneNumber}</Text>
+          </Section>
+          
+          <Section style={section}>
+            <Text style={sectionHeading}>Subject:</Text>
+            <Text style={sectionContent}>{subject}</Text>
+          </Section>
+          
+          <Section style={section}>
+            <Text style={sectionHeading}>Message:</Text>
+            <Text style={sectionContent}>{message}</Text>
+          </Section>
+          
+          <Hr style={hr} />
+          <Text style={footer}>This email was sent from your website's contact form.</Text>
+        </Container>
+      </Body>
     </Html>
   );
 }
+
+// Styles
+const main = {
+  backgroundColor: '#f6f9fc',
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+};
+
+const container = {
+  margin: '0 auto',
+  padding: '20px 0 48px',
+  maxWidth: '580px',
+};
+
+const h1 = {
+  fontSize: '24px',
+  fontWeight: '600',
+  color: '#294661',
+  marginBottom: '24px',
+};
+
+const text = {
+  fontSize: '16px',
+  lineHeight: '26px',
+  color: '#3c4043',
+};
+
+const section = {
+  marginBottom: '16px',
+};
+
+const sectionHeading = {
+  fontSize: '14px',
+  fontWeight: 'bold',
+  marginBottom: '4px',
+  color: '#294661',
+};
+
+const sectionContent = {
+  fontSize: '14px',
+  lineHeight: '24px',
+  margin: '0',
+  color: '#3c4043',
+};
+
+const hr = {
+  borderColor: '#e6ebf1',
+  margin: '20px 0',
+};
+
+const footer = {
+  fontSize: '12px',
+  color: '#8898aa',
+  marginTop: '12px',
+};

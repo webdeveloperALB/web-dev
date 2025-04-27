@@ -14,7 +14,7 @@
 	width: 1px;
 	height: 100%;
 	display: block;
-	background: #292929;
+	background: #121212; /* updated to palette background */
 }
 .line-shape span::before,
 .line-shape span::after {
@@ -22,7 +22,7 @@
 	top: 0;
 	left: 0;
 	content: "";
-	background: #9541C6;
+	background: #9d4edd; /* vibrant purple */
 	box-shadow: rgba(228, 235, 242, 0.2) 0px 8px 24px;
 	border-top-left-radius: 50px;
 	border-top-right-radius: 50px;
@@ -44,7 +44,7 @@
 	height: 24px;
 	bottom: 0;
 	left: 0;
-	background: #9541C6;
+	background: #9d4edd; /* vibrant purple */
 	box-shadow: rgba(228, 235, 242, 0.2) 0px 8px 24px;
 	border-top-left-radius: 50px;
 	border-top-right-radius: 50px;
@@ -109,6 +109,6 @@
 	font-weight: 500;
 
 	&:hover {
-		color: #9541C6;
+		color: #9d4edd; /* vibrant purple */
 	}
 }

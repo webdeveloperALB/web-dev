@@ -1,70 +1,67 @@
 "use server";
 
-import React from "react";
-import { Resend } from "resend";
-import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
+import { Resend } from 'resend';
+import { z } from 'zod';
+import ContactFormEmail from '@/email/contact-form-email';
 
+// Initialize Resend with your API key
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("senderEmail") as string;
-  const message = formData.get("message") as string;
-  const firstName = formData.get("firstName") as string;
-  const lastName = formData.get("lastName") as string | null;
-  const phoneNumber = formData.get("phoneNumber") as string;
-  const subject = formData.get("subject") as string;
+// Create a schema for form validation
+const FormSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  senderEmail: z.string().email("Invalid email address"),
+  phoneNumber: z.string().min(1, "Phone number is required"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(1, "Message is required"),
+});
 
-  // simple server-side validation
-  if (!validateString(senderEmail, 500)) {
+export async function sendEmail(formData: FormData) {
+  // Validate form data
+  const validatedFields = FormSchema.safeParse({
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    senderEmail: formData.get("senderEmail"),
+    phoneNumber: formData.get("phoneNumber"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  });
+
+  // If validation fails, return error
+  if (!validatedFields.success) {
     return {
-      error: "Invalid email address",
+      error: "Invalid form data. Please check your inputs.",
+      data: null,
     };
   }
-  if (!validateString(message, 5000)) {
-    return {
-      error: "Message is required and must be less than 5000 characters",
-    };
-  }
-  if (!validateString(firstName, 500)) {
-    return {
-      error: "First name is required",
-    };
-  }
-  if (!validateString(phoneNumber, 500)) {
-    return {
-      error: "Phone number is required",
-    };
-  }
-  if (!validateString(subject, 500)) {
-    return {
-      error: "Subject is required",
-    };
-  }
-  
-  let data;
+
+  const { firstName, lastName, senderEmail, phoneNumber, subject, message } = validatedFields.data;
+
   try {
-    data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "support@webdev-al.com",
-      subject: `Message from contact form: ${subject}`,
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, {
-        message: message,
-        senderEmail: senderEmail,
-        firstName: firstName,
-        lastName: lastName || "",
-        subject: subject,
-        phoneNumber: phoneNumber,
+    // Send email using Resend
+    const data = await resend.emails.send({
+      from: 'Contact Form <support@webdev-al.com>', // Use your verified domain
+      to: ['support@webdev-al.com'], // Replace with your email
+      subject: `Contact Form: ${subject}`,
+      react: ContactFormEmail({ 
+        firstName, 
+        lastName, 
+        senderEmail, 
+        phoneNumber, 
+        subject, 
+        message 
       }),
     });
-  } catch (error: unknown) {
+
     return {
-      error: getErrorMessage(error),
+      error: null,
+      data,
+    };
+  } catch (error) {
+    return {
+      error: "Failed to send email. Please try again later.",
+      data: null,
     };
   }
-
-  return {
-    data,
-  };
-};
+}

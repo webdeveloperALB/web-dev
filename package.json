@@ -35,24 +35,27 @@
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.2",
     "react-wrap-balancer": "^1.1.0",
-    "resend": "^3.2.0",
+    "resend": "^3.5.0",
     "sanity": "^3.42.1",
     "sass": "^1.77.1",
     "sharp": "^0.33.4",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "wow.js": "^1.2.2"
+    "wow.js": "^1.2.2",
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.3",
+    "stylelint-config-tailwindcss": "^1.0.0",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }

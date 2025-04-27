@@ -5,6 +5,10 @@ import "aos/dist/aos.css"; // Make sure you import the CSS
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 
+
+export function ToastProvider() {
+  return <Toaster position="bottom-right" />;
+}
 export function BalancerProvider({
   children,
 }: Readonly<{
@@ -36,7 +40,7 @@ export function BalancerProvider({
     return () => clearTimeout(timer);
   }, []);
 
-  return (
+  return  (
     <Provider>
       {children}
       <Toaster position="top-right" />

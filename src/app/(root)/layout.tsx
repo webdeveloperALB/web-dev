@@ -14,6 +14,8 @@ import Preloader from "@/components/preloader";
 import TextSLider1 from "@/components/textslide";
 import Footer from "@/components/common/footer";
 import { BalancerProvider } from "../providers/provider";
+import { Toaster } from "react-hot-toast";
+import { ToastProvider as ToastProviderWrapper } from "../providers/provider";
 
 // Load Inter font with proper subset for optimization
 const inter = Inter({
@@ -21,11 +23,13 @@ const inter = Inter({
   display: 'swap',
 });
 
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Full-Stack Web Development Services",
     default: "WebDev AL | Expert Full-Stack Development Services",
   },
+
   description:
     "Custom React web development for fast, modern, and scalable websites. Tailored solutions for businesses. Get a free consultation today!",
   keywords: [
@@ -102,7 +106,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Next.js</title>
+        <title>WD:Programming</title>
         <link rel="icon" href="/favicon.ico?v=2" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -172,17 +176,19 @@ export default function RootLayout({
         />
       </head>
       <body>
+        
         <BalancerProvider>
           <SmoothScrolling>
             <Navigation />
-            <main className="pt-24" id="main-content">
+            <main className="pt-24" id="main-content" role="main" tabIndex={-1}>
               {children}
             </main>
             <TextSLider1 />
             <Footer />
           </SmoothScrolling>
-        </BalancerProvider>
+        <ToastProviderWrapper />
         <Analytics />
+        </BalancerProvider>
       </body>
     </html>
   );

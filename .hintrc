@@ -3,6 +3,14 @@
     "development"
   ],
   "hints": {
-    "apple-touch-icons": "off"
+    "apple-touch-icons": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-command-name": "off",
+        "aria-valid-attr-value": "off"
+      }
+    ],
+    "no-inline-styles": "off"
   }
 }

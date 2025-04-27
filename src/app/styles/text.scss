@@ -58,11 +58,11 @@
 			font-size: 40px;
 			font-weight: 700;
 			line-height: 65px;
-            color: black;
+            color: #00aaff; /* Electric Blue */
 			text-transform: uppercase;
 		}
 		.text-custom-storke {
-			-webkit-text-stroke: 1px rgb(0, 0, 0);
+			-webkit-text-stroke: 1px #00aaff; /* Electric Blue */
 			-webkit-text-fill-color: transparent;
 		}
 	}
@@ -152,7 +152,7 @@
 			line-height: 70px;
 			opacity: 25%;
 			transition: all 0.5s;
-			.serial-badge {
+			serial-badge {
 				padding: 7px 18px;
 				width: 80px;
 				line-height: initial;
@@ -211,13 +211,6 @@
 		}
 	}
 }
-.text-slie-reverse {
-	.comm {
-		display: flex;
-		align-items: center;
-		animation: scroll 80s linear infinite;
-	}
-}
 //test slide version two
 
 //test slide version three
@@ -238,9 +231,6 @@
 				font-size: 30px;
 				font-weight: 700;
 				line-height: 58px;
-			}
-			img {
-				width: 55px;
 			}
 		}
 	}
