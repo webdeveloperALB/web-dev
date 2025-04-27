@@ -1,10 +1,12 @@
 @import url("https://api.fontshare.com/v2/css?f[]=work-sans@300301400500700900&f[]=chillax@300400500600&f[]=pencerio@50&f[]=alpino@300400500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Source+Code+Pro:italwght@0200..900;1200..900&family=Source+Sans+3:italwght@0200..900;1200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 /* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 /* stylelint-enable at-rule-no-unknown */
+
 :root {
   --foreground-rgb: 0 0 0;
   --background-start-rgb: 214 219 220;
