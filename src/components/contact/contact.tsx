@@ -122,7 +122,6 @@ const Contact = () => {
                 <h4 className="text-xl md:text-2xl font-medium">Contact</h4>
                 <p>Phone 1: +355688172927</p>
                 <p>Phone 2: +355685692096</p>
-                {/*<p>Phone: +355688172927 +355685692096</p>*/}
               </div>
               <div className="flex flex-col gap-2">
                 <h4 className="text-xl md:text-2xl font-medium">Open Time</h4>
