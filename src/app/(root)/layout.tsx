@@ -21,22 +21,53 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Full-Stack Web Development Services",
-    default: "WebDev AL | Expert Full-Stack Development Services",
+    template: "%s | WebDev AL - Custom Web Solutions",
+    default: "WebDev AL | Custom React & Full-Stack Development Services",
   },
   description:
-    "Custom React web development for fast, modern, and scalable websites. Tailored solutions for businesses. Get a free consultation today!",
-  // Keep the other metadata fields as they are but move structured data to separate files
+    "Custom React web development for fast, modern, and scalable business websites. Expert full-stack solutions including UI/UX design, API integration, and database architecture.",
   keywords: [
     "Web Development",
     "full-stack web development",
     "React development",
     "Node.js development",
-    "custom web solutions"
-    // Trimmed for readability, keep your full list
+    "custom web solutions",
+    "UI/UX design",
+    "API integration",
+    "database architecture",
+    "responsive websites",
+    "web applications"
   ],
   metadataBase: new URL("https://www.webdev-al.com/"),
-  // Keep other metadata fields
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.webdev-al.com/",
+    siteName: "WebDev AL",
+    title: "WebDev AL | Custom React & Full-Stack Development Services",
+    description: "Custom React web development for fast, modern, and scalable business websites. Expert full-stack solutions.",
+    images: [
+      {
+        url: "https://www.webdev-al.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "WebDev AL - Full-Stack Development Services"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WebDev AL | Custom React & Full-Stack Development Services",
+    description: "Custom React web development for fast, modern, and scalable business websites.",
+    images: ["https://www.webdev-al.com/og-image.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
+  alternates: {
+    canonical: "https://www.webdev-al.com"
+  }
 };
 
 // Implement Server-Side Generation for better indexing
@@ -54,7 +85,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="mobile-web-app-capable" content="yes" />
         
-        {/* Remove preloads for missing resources */}
+        {/* Add favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         
         {/* Google Tag Manager - load only in production */}
         {process.env.NODE_ENV === 'production' && (
@@ -73,7 +109,7 @@ export default function RootLayout({
           />
         )}
 
-        {/* Move structured data to separate file in production */}
+        {/* Structured data */}
         <Script
           id="schema-data"
           strategy="afterInteractive"
@@ -94,18 +130,6 @@ export default function RootLayout({
           </noscript>
         )}
 
-        <BalancerProvider>
-          <Navigation />
-          <main className="pt-24 min-h-screen" id="main-content" role="main" tabIndex={-1}>
-            {children}
-          </main>
-          {/* Load TextSlider conditionally only on homepage */}
-          {/* <TextSLider1 /> */}
-          <Footer />
-          <ToastProviderWrapper />
-          <Analytics />
-        </BalancerProvider>
-
         {/* Skip to main content link for accessibility */}
         <a 
           href="#main-content" 
@@ -113,6 +137,16 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+
+        <BalancerProvider>
+          <Navigation />
+          <main className="pt-24 min-h-screen" id="main-content" role="main" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+          <ToastProviderWrapper />
+          <Analytics />
+        </BalancerProvider>
       </body>
     </html>
   );
