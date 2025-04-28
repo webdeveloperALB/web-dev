@@ -12,28 +12,26 @@ const Abouthome = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="w-full">
           <Image
-            src={
-              "/aboutus.jpg"
-            }
+            src={"/aboutus.jpg"}
             alt="about"
             width={500}
             height={300}
-            className="w-full max-w-5xl h-40 md:h-[400px]  object-cover rounded-3xl"
+            className="w-full max-w-5xl h-40 md:h-[400px] object-cover rounded-3xl"
           />
         </div>
         <div className="space-y-6">
           <div className="flex gap-4 items-center">
             <div className="w-10 h-0.5 bg-primary" />
-            <h4>About Us</h4>
+            <span className="text-base font-medium">About Us</span>
           </div>
-          <h4 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
             We&apos;re{" "}
             <span className="text-primary text-3xl md:text-4xl lg:text-5xl">
               a results-driven Full-Stack
             </span>
             <br />
             Development Team
-          </h4>
+          </h2>
 
           <div>
             <ParallaxReveal paragraph={phrase} />
@@ -66,8 +64,6 @@ const Abouthome = () => {
             <Link href={"/about"} className="w-fit">
               <button className="button bg-primary">Learn More</button>
             </Link>
-
-
           </div>
         </div>
       </div>
