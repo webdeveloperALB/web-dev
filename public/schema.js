@@ -48,8 +48,8 @@ const organizationSchema = {
       "addressRegion": "Your State",
       "addressCountry": "US"
     },
-    "telephone": "+1-XXX-XXX-XXXX",
-    "openingHours": "Mo-Fr 09:00-17:00",
+    "telephone": "+355688172927",
+    "openingHours": "Mo-Fr 00:00-24:00",
     "sameAs": [
       "https://www.linkedin.com/company/webdev-al",
       "https://twitter.com/webdev_al"
