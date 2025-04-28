@@ -57,7 +57,9 @@ const Testimonial = () => {
       onMouseLeave={() => setIsAutoRotate(true)}
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          What Our Clients Say
+        </h2>
 
         <div className="relative bg-white rounded-xl shadow-lg p-8 md:p-10">
           {/* Quote icon top */}
@@ -70,11 +72,14 @@ const Testimonial = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`transition-opacity duration-500 absolute top-0 left-0 w-full ${index === currentTestimonialIndex ? "opacity-100 z-10" : "opacity-0 -z-10"
-                  }`}
+                className={`transition-opacity duration-500 absolute top-0 left-0 w-full ${
+                  index === currentTestimonialIndex
+                    ? "opacity-100 z-10"
+                    : "opacity-0 -z-10"
+                }`}
               >
                 <p className="text-gray-700 text-lg italic mb-6 text-center px-8">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
               </div>
             ))}
@@ -88,8 +93,19 @@ const Testimonial = () => {
           {/* Author section with avatar */}
           <div className="flex items-center justify-center mt-8 pt-6 border-t border-gray-200">
             <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
               </svg>
             </div>
             <div>
@@ -117,8 +133,11 @@ const Testimonial = () => {
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-colors focus:outline-none ${index === currentTestimonialIndex ? "bg-purple-500" : "bg-gray-300 hover:bg-gray-400"
-                  }`}
+                className={`w-3 h-3 rounded-full transition-colors focus:outline-none ${
+                  index === currentTestimonialIndex
+                    ? "bg-purple-500"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
                 onClick={() => setCurrentTestimonialIndex(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
