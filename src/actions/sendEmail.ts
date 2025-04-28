@@ -42,7 +42,7 @@ export async function sendEmail(formData: FormData) {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'Contact Form <support@webdev-al.com>', // Use your verified domain
-      to: ['support@webdev-al.com'], // Replace with your email
+      to: ['orgito.hysenbelliu@gmail.com'], // Replace with your email
       subject: `Contact Form: ${subject}`,
       react: ContactFormEmail({ 
         firstName, 
