@@ -39,51 +39,60 @@ const fetchProjects = async () => {
   }
 };
 
+export const metadata = {
+  title: "Expert Full-Stack Web Development Services",
+  description: "Custom React web applications and responsive websites built with modern technologies. Get a free consultation today!",
+};
+
 export default async function Home() {
   const projects = await fetchProjects();
   
   return (
-    <div className="home-container">
-      {/* Keep only one H1 for the entire page */}
-      <h1 className="text-4xl font-bold text-center my-8 lg:my-12">
-        Expert Full-Stack Web Development Services
-      </h1>
+    <>
+      {/* Hero section with the ONLY H1 on the page */}
+      <section id="hero" className="w-full">
+        <Hero />
+      </section>
       
-      <Hero />
-      
-      {/* Remove section headings from the page component */}
-      <section id="services" className="py-12">
+      <section id="services" className="py-12" aria-labelledby="services-heading">
+        <h2 id="services-heading" className="text-3xl font-bold text-center mb-8">Our Services</h2>
         <TextSLider1 />
         <SectionSolutionsList />
       </section>
       
-      <section id="about" className="py-12">
+      <section id="about" className="py-12" aria-labelledby="about-heading">
+        <h2 id="about-heading" className="text-3xl font-bold text-center mb-8">About Us</h2>
         <Abouthome />
       </section>
       
-      <section id="offers" className="py-12">
+      <section id="offers" className="py-12" aria-labelledby="offers-heading">
+        <h2 id="offers-heading" className="text-3xl font-bold text-center mb-8">What We Offer</h2>
         <SectionOffer />
       </section>
       
       <TextSLider1 />
       
-      <section id="quote" className="py-12">
+      <section id="quote" className="py-12" aria-labelledby="quote-heading">
+        <h2 id="quote-heading" className="text-3xl font-bold text-center mb-8">Get a Quote</h2>
         <SectionQuote />
       </section>
       
-      <section id="testimonials" className="py-12">
+      <section id="testimonials" className="py-12" aria-labelledby="testimonials-heading">
+        <h2 id="testimonials-heading" className="text-3xl font-bold text-center mb-8">Client Testimonials</h2>
         <Review />
       </section>
       
       <TextSLider1 />
       
-      <section id="faq" className="py-12">
+      <section id="faq" className="py-12" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <SectionFaq />
       </section>
       
-      <section id="contact" className="py-12">
+      <section id="contact" className="py-12" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" className="text-3xl font-bold text-center mb-8">Contact Us</h2>
         <Contact />
       </section>
-    </div>
+    </>
   );
 }
