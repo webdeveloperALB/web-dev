@@ -3,7 +3,7 @@ import "./header.scss";
 import React, { useContext, useState } from "react";
 import { NavigationContext } from "../navigation";
 import Icon_menu from "@/components/icons/icon-menu";
-import Image from 'next/image';
+import Image from "next/image";
 import { useAnimate, stagger } from "framer-motion";
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
@@ -44,18 +44,16 @@ const Header = () => {
               alt="Logo"
               width={100}
               height={40}
-              style={{ borderRadius: '10px', filter: 'none' }}
+              style={{ borderRadius: "10px", filter: "none" }}
             />
           </Link>
         </span>
-
-
 
         <ul className="header__nav-list">
           <li className="header__nav-item">
             <button
               onClick={handleClickMenu}
-              className="header__nav-button outline-none"
+              className="header__nav-button flex items-center gap-6 outline-none mr-40 max-[500px]:mr-0"
             >
               <span className="header__nav-text">Menu</span>
               <span className="header__nav-icon">
