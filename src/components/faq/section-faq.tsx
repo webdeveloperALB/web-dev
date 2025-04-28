@@ -4,23 +4,21 @@ import SectionFaqList from "./section-faq-list";
 
 export default function SectionFaq() {
   return (
-    <section id="faq" className="section-faq py-16">
+    <section className="section-faq py-16">
       <div className="container section-faq__container">
         <div className="section-faq__heading-wrapper">
-          <div className=" flex gap-4 items-center justify-center ">
+          <div className="flex gap-4 items-center justify-center">
             <div className="w-10 h-0.5 bg-primary" />
-            <small className="section-faq__top-caption">Faq</small>
+            <small className="section-faq__top-caption">FAQ</small>
           </div>
-          {/* <small className="section-faq__top-caption">Faq</small> */}
-          <h2 className="section-faq__heading">Frequently Asked Questions</h2>
+          {/* Only one h2 heading here */}
+          <h2 className="section-faq__heading">Frequently Asked Questions About Web Development</h2>
         </div>
         <SectionFaqList />
         <div className="section-faq__image-wrapper">
           <Image
-            src={
-              "/faq.jpeg"
-            }
-            alt="faq"
+            src="/faq.jpeg"
+            alt="Frequently asked questions about web development services"
             fill={true}
             sizes="30vw"
           />

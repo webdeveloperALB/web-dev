@@ -15,8 +15,7 @@ type ItemProps = {
 const items = [
   {
     title: "Full-Stack Web Development",
-    content:
-      "We build powerful, scalable full-stack apps that drive results.",
+    content: "We build powerful, scalable full-stack apps that drive results.",
     skills: [
       "React.js / Next.js",
       "Node.js / Express.js",
@@ -37,8 +36,7 @@ const items = [
   },
   {
     title: "UI / UX Design",
-    content:
-      "Beautiful, intuitive designs that users love and remember.",
+    content: "Beautiful, intuitive designs that users love and remember.",
     skills: [
       "Wireframing & Prototyping",
       "User Journeys",
@@ -48,8 +46,7 @@ const items = [
   },
   {
     title: "Database Architecture",
-    content:
-      "Smart, scalable databases built for speed, growth, and security",
+    content: "Smart, scalable databases built for speed, growth, and security",
     skills: [
       "Relational & NoSQL Databases",
       "Database Design & Indexing",
@@ -59,8 +56,7 @@ const items = [
   },
   {
     title: "API Development & Integration",
-    content:
-      "We optimize, secure, and launch apps built to perform at scale",
+    content: "We optimize, secure, and launch apps built to perform at scale",
     skills: [
       "RESTful API Design",
       "Third-party Integrations",
@@ -105,7 +101,6 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
             >
               {skill}
             </div>
-
           ))}
         </div>{" "}
       </div>
@@ -124,7 +119,9 @@ function SectionSolutionsItem({ caption, heading, text, item }: ItemProps) {
           ))}
         </div>{" "}
         <br />
-        <p className="section-solutions__item-text text-2xl md:text-xl font-normal">{text}</p>
+        <p className="section-solutions__item-text text-2xl md:text-xl font-normal">
+          {text}
+        </p>
       </div>
     </li>
   );
@@ -136,15 +133,17 @@ export default function SectionSolutionsList() {
       <div className="max-w-7xl mx-auto p-4 w-full ">
         <div className="flex gap-4 items-center">
           <div className="w-10 h-0.5 bg-primary" />
-          <h4>Our Services</h4>
+          {/* Change from h4 to a descriptive label */}
+          <span className="text-sm font-medium uppercase">Services</span>
         </div>
 
         <div className="grid grid-cols-1 g md:grid-cols-2 gap-4">
           <div>
-            <h4 className="text-3xl font-medium md:text-4xl lg:text-5xl">
+            {/* Change from h4 to h2 for proper hierarchy */}
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
               Discover Our <br />
               Digital Solutions
-            </h4>
+            </h2>
           </div>
           <div className="border-l-2 px-4 border-l-primary h-fit">
             <ParallaxReveal

@@ -16,19 +16,18 @@ const Contact = () => {
   return (
     <div className="bg-white min-h-screen p-4 text-black py-20 contact">
       <div className="max-w-7xl mx-auto p-4">
+        {/* Using span instead of h4 for the subtitle marker */}
         <div className="flex gap-4 items-center text-black">
           <div className="w-10 h-0.5 bg-primary" />
-          <h4>Contact Us</h4>
+          <span className="font-medium">Contact Us</span>
         </div>
         <br />
-        <div>
-          <h4 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-            Join Us in Creating
-          </h4>
-          <h4 className="text-primary text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-            Something Great
-          </h4>
-        </div>
+        
+        {/* Main heading - using h1 as the primary page heading */}
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
+          Join Us in Creating 
+          <span className="text-primary block">Something Great</span>
+        </h1>
         <br />
 
         <form
@@ -114,23 +113,24 @@ const Contact = () => {
               </div>
             </div>
             <div className="md:col-span-4 bg-primary rounded-xl p-4 flex flex-col justify-between gap-4">
+              {/* Using h2 for the sidebar section headings instead of h4 */}
               <div className="flex flex-col gap-2">
-                <h4 className="text-xl md:text-2xl font-medium">Address</h4>
+                <h2 className="text-xl md:text-2xl font-medium">Address</h2>
                 <p>Tirane, Albania</p>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="text-xl md:text-2xl font-medium">Contact</h4>
+                <h2 className="text-xl md:text-2xl font-medium">Contact</h2>
                 <p>Phone 1: +355688172927</p>
                 <p>Phone 2: +355685692096</p>
               </div>
               <div className="flex flex-col gap-2">
-                <h4 className="text-xl md:text-2xl font-medium">Open Time</h4>
+                <h2 className="text-xl md:text-2xl font-medium">Open Time</h2>
                 <p>We operate 24/7.</p>
               </div>
               <div className="flex flex-col gap-1">
-                <h4 className="text-xl md:text-2xl font-medium">
+                <h2 className="text-xl md:text-2xl font-medium">
                   Stay Connected
-                </h4>
+                </h2>
                 <Social />
               </div>
             </div>

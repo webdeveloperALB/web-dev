@@ -44,47 +44,44 @@ export default async function Home() {
   
   return (
     <div className="home-container">
-      <h1 className="sr-only">Web Development - Professional Full-Stack Web Solutions</h1>
+      {/* Keep only one H1 for the entire page */}
+      <h1 className="text-4xl font-bold text-center my-8 lg:my-12">
+        Expert Full-Stack Web Development Services
+      </h1>
       
       <Hero />
       
-      <section id="services" aria-labelledby="services-heading">
-        <h2 id="services-heading" className="sr-only">Our Services</h2>
+      {/* Remove section headings from the page component */}
+      <section id="services" className="py-12">
         <TextSLider1 />
         <SectionSolutionsList />
       </section>
       
-      <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading" className="sr-only">About Us</h2>
+      <section id="about" className="py-12">
         <Abouthome />
       </section>
       
-      <section id="offers" aria-labelledby="offers-heading">
-        <h2 id="offers-heading" className="sr-only">What We Offer</h2>
+      <section id="offers" className="py-12">
         <SectionOffer />
       </section>
       
       <TextSLider1 />
       
-      <section id="quote" aria-labelledby="quote-heading">
-        <h2 id="quote-heading" className="sr-only">Get a Quote</h2>
+      <section id="quote" className="py-12">
         <SectionQuote />
       </section>
       
-      <section id="testimonials" aria-labelledby="testimonials-heading">
-        <h2 id="testimonials-heading" className="sr-only">Client Testimonials</h2>
+      <section id="testimonials" className="py-12">
         <Review />
       </section>
       
       <TextSLider1 />
       
-      <section id="faq" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" className="sr-only">Frequently Asked Questions</h2>
+      <section id="faq" className="py-12">
         <SectionFaq />
       </section>
       
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="sr-only">Contact Us</h2>
+      <section id="contact" className="py-12">
         <Contact />
       </section>
     </div>

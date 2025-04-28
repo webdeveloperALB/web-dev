@@ -139,27 +139,29 @@ export default function SectionSolutionsList() {
   return (
     <div className="bg-white text-black py-16">
       <div className="max-w-7xl mx-auto p-4 w-full ">
-        <div className="flex gap-4 items-center justify-center">
+        <div className="flex gap-4 items-center">
           <div className="w-10 h-0.5 bg-primary" />
-          <h4>Our Services</h4>
+          {/* Change from h4 to a descriptive label */}
+          <span className="text-sm font-medium uppercase">Services</span>
         </div>
 
-        <div className="flex justify-center flex-col items-center gap-4 mt-4">
+        <div className="grid grid-cols-1 g md:grid-cols-2 gap-4">
           <div>
-            <h4 className="text-3xl font-medium md:text-4xl lg:text-5xl">
+            {/* Change from h4 to h2 for proper hierarchy */}
+            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl">
               Discover Our <br />
-              Web Development Solutions
-            </h4>
+              Digital Solutions
+            </h2>
           </div>
           <div className="border-l-2 px-4 border-l-primary h-fit">
             <ParallaxReveal
               paragraph={
-                "At our agency, we specialize in full-stack web development, offering end-to-end services to build high-performing, secure, and scalable websites. From custom web apps to SEO-optimized content, our solutions are designed to elevate your business online."
+                "We offer a comprehensive suite of services designed to elevate your online presence and drive your business growth."
               }
             />
           </div>
         </div>
-        <ul className="section-solutions__list mt-8">
+        <ul className="section-solutions__list mt-8 pr-4 overflow-x-hidden">
           {items.map((el, i) => (
             <SectionSolutionsItem
               key={i}

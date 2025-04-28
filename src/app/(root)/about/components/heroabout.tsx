@@ -13,9 +13,7 @@ const Abouthome = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="w-full">
             <Image
-              src={
-                "/aboutus2.jpg"
-              }
+              src="/aboutus2.jpg"
               alt="web development agency"
               width={500}
               height={300}
@@ -25,16 +23,16 @@ const Abouthome = () => {
           <div className="space-y-6">
             <div className="flex gap-4 items-center">
               <div className="w-10 h-0.5 bg-primary" />
-              <h4>About Us</h4>
+              <span className="text-base font-medium">About Us</span>
             </div>
-            <h4 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
               Your{" "}
               <span className="text-primary text-3xl md:text-4xl lg:text-5xl">
                 full-stack partner
               </span>
               <br />
               for digital success
-            </h4>
+            </h2>
 
             <div>
               <ParallaxReveal paragraph={phrase} />
@@ -66,7 +64,7 @@ const Abouthome = () => {
 
             <div className="flex items-center gap-8">
               <div className="delafield text-black text-3xl">
-                <h5>WebDevelopment</h5>
+                <span>WebDevelopment</span>
               </div>
             </div>
           </div>
