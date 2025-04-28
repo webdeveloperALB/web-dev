@@ -115,7 +115,6 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="es-ES" href="https://www.webdev-al.com/es-ES" />
         <link rel="alternate" hrefLang="x-default" href="https://www.webdev-al.com/" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         {/* Google Tag (gtag.js) */}
         <Script
           async
