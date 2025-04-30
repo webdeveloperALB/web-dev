@@ -92,10 +92,10 @@ const Footer = () => {
             </h3>
             <ul className="flex flex-col gap-4">
               <li>
-                <a href="tel:+2347035172208">+355688172927</a>
+                <a href="tel:+355688172927">+355688172927</a>
               </li>
               <li>
-                <a href="tel:+2347035172208">+355685692096</a>
+                <a href="tel:+355685692096">+355685692096</a>
               </li>
             </ul>
           </div>

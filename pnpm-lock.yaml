@@ -63,8 +63,8 @@ importers:
         specifier: ^4.2.3
         version: 4.2.3(next@14.2.3(@babel/core@7.26.10)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.87.0))
       pnpm:
-        specifier: ^10.9.0
-        version: 10.9.0
+        specifier: ^10.10.0
+        version: 10.10.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -5181,8 +5181,8 @@ packages:
     resolution: {integrity: sha512-Kb2dcpMsIutFw2hYrN0EhsAXOUJTd6FVMIxvNAkZCMQLVt9NGZqQczvGpYDxNWCZeCWLHUPxQIBudWzt1h7VVA==}
     engines: {node: '>=14.0.0'}
 
-  pnpm@10.9.0:
-    resolution: {integrity: sha512-BIbjlGQNPB+zydQ9Sc+Sh5/3T4UWlZwjUwj1qPYuLhlSimXNwqMFj1h83nHro9W1YyfIwzqX5MQFHKSKEMotXw==}
+  pnpm@10.10.0:
+    resolution: {integrity: sha512-1hXbJG/nDyXc/qbY1z3ueCziPiJF48T2+Igkn7VoFJMYY33Kc8LFyO8qTKDVZX+5VnGIv6tH9WbR7mzph4FcOQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -11969,7 +11969,7 @@ snapshots:
 
   pluralize-esm@9.0.5: {}
 
-  pnpm@10.9.0: {}
+  pnpm@10.10.0: {}
 
   polished@4.3.1:
     dependencies:

@@ -37,27 +37,16 @@ const Hero = () => {
             Custom Web Applications
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            API Integration & Development
+            API & Database Integration
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            Database Design & Management
+            CMS & E-commerce Platforms
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            Performance Optimization
-          </span>
-          <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            CMS & Admin Dashboards
-          </span>
-          <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            SEO-Optimized Websites
-          </span>
-          <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            E-commerce Solutions
-          </span>
-          <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            Firebase & Cloud Functions
+            SEO & Performance Optimization
           </span>
         </div>
+
         <div className="max-[500px]:hidden">
           <ParallaxReveal paragraph={phrase} />
         </div>
@@ -70,15 +59,6 @@ const Hero = () => {
             width={600}
             height={320}
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
-          />
-        </div>
-        <div className="bg-primary/50 capitalize flex flex-col gap-8 justify-between items-center rounded-xl md:col-span-3">
-          <Image
-            src="/qrcode.png"
-            alt="herobarcode"
-            width={300}
-            height={300}
-            className="filter-none !filter-none animate-pulse w-full p-0"
           />
         </div>
 

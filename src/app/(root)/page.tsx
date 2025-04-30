@@ -91,14 +91,14 @@ export default async function Home() {
       </section>
 
       <section id="testimonials" className="py-12" aria-labelledby="testimonials-heading">
-        <h2 id="testimonials-heading" className="text-3xl font-bold text-center mb-8">Client Testimonials</h2>
+        <h2 id="testimonials-heading" className="text-3xl font-bold text-center mb-8"></h2>
         <Review />
       </section>
 
       <TextSLider1 />
 
       <section id="faq" className="py-12" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <h2 id="faq-heading" className="text-3xl font-bold text-center mb-8"></h2>
         <SectionFaq />
       </section>
 

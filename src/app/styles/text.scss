@@ -58,11 +58,13 @@
 			font-size: 40px;
 			font-weight: 700;
 			line-height: 65px;
-            color: #00aaff; /* Electric Blue */
+            //color: #00aaff; /* Electric Blue */
+			color: #000000;
 			text-transform: uppercase;
 		}
 		.text-custom-storke {
-			-webkit-text-stroke: 1px #00aaff; /* Electric Blue */
+			//-webkit-text-stroke: 1px #00aaff; /* Electric Blue */
+			-webkit-text-stroke: 1px #000000;
 			-webkit-text-fill-color: transparent;
 		}
 	}
