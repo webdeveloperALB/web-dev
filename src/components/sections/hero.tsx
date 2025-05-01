@@ -9,8 +9,9 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
+  // Updated the phrase to include keywords from H1: "innovation", "code", and "creativity"
   const phrase =
-    "We build custom digital solutions that combine elegant design with powerful performance, helping your business thrive online.";
+    "We build custom digital solutions that combine elegant design with powerful performance, helping your business thrive online through innovative coding approaches and creative problem-solving.";
   return (
     <div className="max-w-7xl mx-auto text-white w-full p-4">
       <div className="flex gap-4 my-8 items-center">
@@ -77,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <div className="md:col-span-9 max-[500px]:hidden"> {/* Added hiding class */}
+        <div className="md:col-span-9 max-[500px]:hidden">
           <Image
             src="/logofinal.svg"
             alt="HERO-IMAGE"
@@ -86,6 +87,13 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
           />
         </div>
+      </div>
+      
+      {/* Added paragraph that reinforces H1 keywords for mobile users */}
+      <div className="mt-6 md:hidden">
+        <p className="text-sm">
+          Our innovative approach to coding combines technical expertise with creative solutions, delivering digital experiences that help your business stand out in today's competitive landscape.
+        </p>
       </div>
     </div>
   );
