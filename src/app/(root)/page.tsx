@@ -41,8 +41,8 @@ const fetchProjects = async () => {
 
 // Enhanced metadata with improved SEO attributes
 export const metadata: Metadata = {
-  title: "Custom React & Full-Stack Development Services",
-  description: "Expert React development services for responsive, high-performance web applications. We build modern websites with full-stack solutions tailored to your business needs.",
+  title: "Full-Stack Development Services",
+  description: "Expert React development for responsive, high-performance websites. We deliver full-stack solutions tailored to your business needs.",
   keywords: [
     "React development",
     "full-stack web development",
