@@ -16,6 +16,7 @@ export function ParallaxReveal({ paragraph }: any) {
         variants={reveal}
         initial="initial"
         whileInView="open"
+        className="text-xl"
       >
         {word}
       </motion.p>

@@ -85,8 +85,8 @@ export default async function Home() {
 
       <TextSLider1 />
 
-      <section id="quote" className="py-12" aria-labelledby="quote-heading">
-        <h2 id="quote-heading" className="text-3xl font-bold text-center mb-8">Get a Quote</h2>
+      <section id="quote" className="py-0" aria-labelledby="quote-heading">
+        <h2 id="quote-heading" className="text-3xl font-bold text-center mb-8"></h2>
         <SectionQuote />
       </section>
 
@@ -103,7 +103,7 @@ export default async function Home() {
       </section>
 
       <section id="contact" className="py-12" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+        <h2 id="contact-heading" className="text-3xl font-bold text-center mb-8"></h2>
         <Contact />
       </section>
     </>

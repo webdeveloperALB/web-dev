@@ -8,8 +8,8 @@ const Abouthome = () => {
   const phrase =
     "We build powerful web solutions that drive growth and streamline your business online. Our mission is to craft high-performing websites and apps with modern design, clean code, and seamless user experience. From frontend to backend, we deliver scalable, secure, and fully custom solutions built to perform.";
   return (
-    <div className="max-w-7xl mx-auto p-4 flex justify-center items-center flex-col min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="max-w-7xl mx-auto p-4 flex justify-center items-center min-h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
         <div className="w-full">
           <Image
             src={"/aboutus.jpg"}
@@ -20,10 +20,6 @@ const Abouthome = () => {
           />
         </div>
         <div className="space-y-6">
-          <div className="flex gap-4 items-center">
-            <div className="w-10 h-0.5 bg-primary" />
-            <span className="text-base font-medium">About Us</span>
-          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
             We&apos;re{" "}
             <span className="text-primary text-3xl md:text-4xl lg:text-5xl">

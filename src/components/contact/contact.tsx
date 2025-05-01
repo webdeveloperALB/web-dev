@@ -19,16 +19,10 @@ const Contact = () => {
         {/* Using span instead of h4 for the subtitle marker */}
         <div className="flex gap-4 items-center text-black">
           <div className="w-10 h-0.5 bg-primary" />
-          <span className="font-medium">Contact Us</span>
+          <span className="text-2xl font-medium">Contact Us</span>
         </div>
         <br />
-        
-        {/* Main heading - using h1 as the primary page heading */}
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium capitalize">
-          Join Us in Creating 
-          <span className="text-primary block">Something Great</span>
-        </h1>
-        <br />
+
 
         <form
           action={async (formData) => {
@@ -55,9 +49,9 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <input 
-                    type="text" 
-                    placeholder="Last Name *" 
+                  <input
+                    type="text"
+                    placeholder="Last Name *"
                     name="lastName"
                     className="w-full p-3 border rounded"
                     required
