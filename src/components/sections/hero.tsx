@@ -92,7 +92,7 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
       {/* Added paragraph that reinforces H1 keywords for mobile users */}
       <div className="mt-6 md:hidden">
         <p className="text-sm">
-          Our innovative approach to coding combines technical expertise with creative solutions, delivering digital experiences that help your business stand out in today's competitive landscape.
+          Our innovative approach to coding combines technical expertise with creative solutions, delivering digital experiences that help your business stand out in today&apos;s competitive landscape.
         </p>
       </div>
     </div>
