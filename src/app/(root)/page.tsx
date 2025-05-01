@@ -61,51 +61,65 @@ export default async function Home() {
   const projects = await fetchProjects();
 
   return (
-    <>
-      {/* Hero section with the ONLY H1 on the page */}
+    <main>
+      {/* Hero section with proper H1 */}
       <section id="hero" className="w-full">
-        <Hero />
+        <Hero hasMainHeading={true} />
       </section>
 
-      <section id="services" className="py-12" aria-labelledby="services-heading">
-        <h2 id="services-heading" className="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <section id="services" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Our Services</h2>
+        </div>
         <TextSLider1 />
         <SectionSolutionsList />
       </section>
 
-      <section id="about" className="py-12" aria-labelledby="about-heading">
-        <h2 id="about-heading" className="text-3xl font-bold text-center mb-8">About Us</h2>
+      <section id="about" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>About Us</h2>
+        </div>
         <Abouthome />
       </section>
 
-      <section id="offers" className="py-12" aria-labelledby="offers-heading">
-        <h2 id="offers-heading" className="text-3xl font-bold text-center mb-8">What We Offer</h2>
+      <section id="offers" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>What We Offer</h2>
+        </div>
         <SectionOffer />
       </section>
 
       <TextSLider1 />
 
-      <section id="quote" className="py-0" aria-labelledby="quote-heading">
-        <h2 id="quote-heading" className="text-3xl font-bold text-center mb-8"></h2>
+      <section id="quote" className="py-0">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Client Quotes</h2>
+        </div>
         <SectionQuote />
       </section>
 
-      <section id="testimonials" className="py-12" aria-labelledby="testimonials-heading">
-        <h2 id="testimonials-heading" className="text-3xl font-bold text-center mb-8"></h2>
+      <section id="testimonials" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Client Testimonials</h2>
+        </div>
         <Review />
       </section>
 
       <TextSLider1 />
 
-      <section id="faq" className="py-12" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" className="text-3xl font-bold text-center mb-8"></h2>
+      <section id="faq" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Frequently Asked Questions</h2>
+        </div>
         <SectionFaq />
       </section>
 
-      <section id="contact" className="py-12" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" className="text-3xl font-bold text-center mb-8"></h2>
+      <section id="contact" className="py-12">
+        <div className="sr-only" aria-hidden="true">
+          <h2>Contact Us</h2>
+        </div>
         <Contact />
       </section>
-    </>
+    </main>
   );
 }

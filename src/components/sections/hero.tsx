@@ -3,7 +3,12 @@ import React from "react";
 import Overflow from "../overflow";
 import { ParallaxReveal } from "@/app/providers/reveal";
 
-const Hero = () => {
+// Add the prop type definition
+interface HeroProps {
+  hasMainHeading?: boolean;
+}
+
+const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
   const phrase =
     "We build custom digital solutions that combine elegant design with powerful performance, helping your business thrive online.";
   return (
@@ -13,19 +18,39 @@ const Hero = () => {
         <h4>Era Defining Website Development</h4>
       </div>
       <div>
-        <h2 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
-          Where Innovation meets
-        </h2>
-        <h2
-          className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary"
-          suppressHydrationWarning // Add this to suppress the specific warning
-          {...(typeof window !== 'undefined' ? {
-            'data-aos': "zoom-in-left",
-            'data-aos-duration': 1800
-          } : {})}
-        >
-          Code & Creativity
-        </h2>
+        {/* Conditional rendering based on hasMainHeading prop */}
+        {hasMainHeading ? (
+          <>
+            <h1 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
+              Where Innovation meets
+              <span className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary block"
+                suppressHydrationWarning
+                {...(typeof window !== 'undefined' ? {
+                  'data-aos': "zoom-in-left",
+                  'data-aos-duration': 1800
+                } : {})}
+              >
+                Code & Creativity
+              </span>
+            </h1>
+          </>
+        ) : (
+          <>
+            <h2 className="font-medium text-4xl md:text-5xl lg:text-6xl capitalize">
+              Where Innovation meets
+            </h2>
+            <h2
+              className="font-medium text-5xl md:text-6xl lg:text-8xl capitalize text-primary"
+              suppressHydrationWarning
+              {...(typeof window !== 'undefined' ? {
+                'data-aos': "zoom-in-left",
+                'data-aos-duration': 1800
+              } : {})}
+            >
+              Code & Creativity
+            </h2>
+          </>
+        )}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
@@ -61,7 +86,6 @@ const Hero = () => {
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
           />
         </div>
-
       </div>
     </div>
   );
