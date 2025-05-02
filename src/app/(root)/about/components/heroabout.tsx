@@ -2,6 +2,7 @@ import { ParallaxReveal } from "@/app/providers/reveal";
 import Image from "next/image";
 import React from "react";
 import { TbRosetteDiscountCheckFilled } from "react-icons/tb";
+import Link from "next/link";
 
 const Abouthome = () => {
   const phrase =
@@ -14,7 +15,7 @@ const Abouthome = () => {
           <div className="w-full">
             <Image
               src="/aboutus2.jpg"
-              alt="web development agency"
+              alt="Our full-stack development team working on web projects"
               width={500}
               height={300}
               className="w-full max-w-4xl h-80 md:h-[500px] object-cover rounded-3xl"
@@ -63,9 +64,13 @@ const Abouthome = () => {
             </div>
 
             <div className="flex items-center gap-8">
-              <div className="delafield text-black text-3xl">
-                <span>WebDevelopment</span>
-              </div>
+              <Link 
+                href="/about" 
+                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all"
+                aria-label="Read more about our full-stack development services"
+              >
+                Discover Our Full-Stack Expertise
+              </Link>
             </div>
           </div>
         </div>

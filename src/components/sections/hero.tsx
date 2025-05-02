@@ -9,9 +9,10 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
-  // Updated the phrase to include keywords from H1: "innovation", "code", and "creativity"
+  // Updated phrase to better incorporate H1 keywords: "innovation", "code", and "creativity"
   const phrase =
-    "We build custom digital solutions that combine elegant design with powerful performance, helping your business thrive online through innovative coding approaches and creative problem-solving.";
+    "We build custom digital solutions that combine innovative code with creative design, delivering powerful performance that helps your business transform and thrive in the digital landscape.";
+
   return (
     <div className="max-w-7xl mx-auto text-white w-full p-4">
       <div className="flex gap-4 my-8 items-center">
@@ -53,17 +54,16 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
           </>
         )}
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
         <div className="flex gap-y-2 flex-wrap">
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            Full-Stack Development
+            Innovative Full-Stack Development
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            Custom Web Applications
+            Creative Web Solutions
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
-            API & Database Integration
+            Clean Code Architecture
           </span>
           <span className="border-x rounded-3xl border-x-white px-4 text-lg">
             CMS & E-commerce Platforms
@@ -72,7 +72,6 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
             SEO & Performance Optimization
           </span>
         </div>
-
         <div className="max-[500px]:hidden">
           <ParallaxReveal paragraph={phrase} />
         </div>
@@ -81,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
         <div className="md:col-span-9 max-[500px]:hidden">
           <Image
             src="/logofinal.svg"
-            alt="HERO-IMAGE"
+            alt="Innovative code and creative web solutions - HERO-IMAGE"
             width={600}
             height={320}
             className="w-full h-80 rounded-xl object-cover filter-none !filter-none"
@@ -89,10 +88,10 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
         </div>
       </div>
       
-      {/* Added paragraph that reinforces H1 keywords for mobile users */}
-      <div className="mt-6 md:hidden">
-        <p className="text-sm">
-          Our innovative approach to coding combines technical expertise with creative solutions, delivering digital experiences that help your business stand out in today&apos;s competitive landscape.
+      {/* Enhanced paragraph that reinforces H1 keywords for all users */}
+      <div className="mt-6">
+        <p className="text-sm md:text-base">
+          Our innovative approach combines cutting-edge code with creative problem-solving, delivering digital experiences that transform ideas into reality. We believe true innovation happens at the intersection of technical expertise and creative thinking.
         </p>
       </div>
     </div>
