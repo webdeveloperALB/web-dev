@@ -41,7 +41,7 @@ const fetchProjects = async () => {
 // Enhanced metadata with improved SEO attributes including H1 keywords
 export const metadata: Metadata = {
   title: "Innovative Code & Creative Full-Stack Development Services",
-  description: "Expert web development combining innovation, clean code, and creativity for responsive, high-performance websites. We deliver full-stack solutions tailored to your business needs.",
+  description: "Expert web development combining innovation, clean code, and creativity for responsive, high-performance websites.",
   keywords: [
     "innovative web development",
     "creative coding solutions",
