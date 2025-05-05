@@ -66,7 +66,7 @@ export default async function Home() {
         <Hero hasMainHeading={true} />
       </section>
       
-      <section id="services" className="py-12">
+      <section id="services">
         <div className="sr-only" aria-hidden="true">
           <h2>Our Innovative Services</h2>
         </div>
@@ -74,14 +74,14 @@ export default async function Home() {
         <SectionSolutionsList />
       </section>
       
-      <section id="about" className="py-12">
+      <section id="about" >
         <div className="sr-only" aria-hidden="true">
           <h2>About Our Creative Approach</h2>
         </div>
         <Abouthome />
       </section>
       
-      <section id="offers" className="py-12">
+      <section id="offers">
         <div className="sr-only" aria-hidden="true">
           <h2>What Our Code Can Do For You</h2>
         </div>

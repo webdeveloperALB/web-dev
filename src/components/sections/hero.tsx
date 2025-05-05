@@ -87,13 +87,14 @@ const Hero: React.FC<HeroProps> = ({ hasMainHeading = false }) => {
           />
         </div>
       </div>
-      
+
       {/* Enhanced paragraph that reinforces H1 keywords for all users */}
-      <div className="mt-6">
+      <div className="mt-6 hidden">
         <p className="text-sm md:text-base">
-          Our innovative approach combines cutting-edge code with creative problem-solving, delivering digital experiences that transform ideas into reality. We believe true innovation happens at the intersection of technical expertise and creative thinking.
+          Our innovative approach combines cutting-edge code with creative problem-solving...
         </p>
       </div>
+
     </div>
   );
 };

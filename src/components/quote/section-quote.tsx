@@ -4,7 +4,7 @@ import Icon_quote from "../icons/icon-quote";
 
 export default function SectionQuote() {
   return (
-    <section className="section-quote min-h-screen flex justify-center items-center">
+    <section className="section-quote py-20 flex justify-center items-center">
       <div className="container section-quote__container">
         <div className="section-quote__top-line">
           <div className="section-quote__quote-icon">
