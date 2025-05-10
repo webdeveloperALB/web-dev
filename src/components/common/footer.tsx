@@ -169,18 +169,7 @@ const Footer = () => {
               <span className="absolute bottom-0 left-0 h-0.5 w-16 bg-primary"></span>
             </h3>
             <ul className="flex flex-col gap-6">
-              <li className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="bg-gray-800/50 p-3 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                  <Phone className="h-6 w-6 text-primary group-hover:rotate-12 transition-transform" />
-                </div>
-                <a href="tel:+355688172927" className="text-gray-300 group-hover:text-primary transition-colors text-xl md:text-2xl">+355 688 172 927</a>
-              </li>
-              <li className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="bg-gray-800/50 p-3 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                  <Phone className="h-6 w-6 text-primary group-hover:rotate-12 transition-transform" />
-                </div>
-                <a href="tel:+355685692096" className="text-gray-300 group-hover:text-primary transition-colors text-xl md:text-2xl">+355 685 692 096</a>
-              </li>
+              
               <li className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
                 <div className="bg-gray-800/50 p-3 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
                   <Mail className="h-6 w-6 text-primary group-hover:rotate-12 transition-transform" />
